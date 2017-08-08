@@ -1,8 +1,8 @@
 ## Web Control Objects
 
-The [*WWTControl**](#wwt-control-object) object is the principal object, the other objects are created on initialization of the object, or can be created by the methods provided by this object.
+The [*WWTControl**](#wwtcontrol-object) object is the principal object, the other objects are created on initialization of the object, or can be created by the methods provided by this object.
 
-Note that the **Example Code** listed for each property or method is _not_ code that will run on its own, just an example of how to use the property or method within a script. Run-able samples are listed and linked to in the [Web Control Samples](#web-control-samples) section.
+Note that the **Example Code** listed for each property or method is _not_ code that will run on its own, just an example of how to use the property or method within a script. Run-able samples are listed and linked to in the [Web Control Samples](#webcontrol-samples) section.
 
 | Object | Description |
 | :-- | :-- |
@@ -322,7 +322,7 @@ The **Radius** property specifies the circle radius.
 
 #### Remarks
 
-If the [**SkyRelative**](#CircleSkyRelative) property is true, then the radius units are degrees of arc, if not then the units are pixels. The default radius is 10.
+If the [**SkyRelative**](#circle-skyrelative-property) property is true, then the radius units are degrees of arc, if not then the units are pixels. The default radius is 10.
 
 {% sample lang="js" -%}
 #### Syntax
@@ -411,20 +411,20 @@ circle.setCenter(286.485, -27.5231666666667);
 
 ## Poly Object
 
-The Poly object is used to render a polygon on the screen. The polygon can be filled with color, or unfilled, but is always a closed shape -- the last point entered for the polygon is connected to the first. It is created by the [**CreatePolygon**](#ViewCreatePolygon) method.
+The Poly object is used to render a polygon on the screen. The polygon can be filled with color, or unfilled, but is always a closed shape -- the last point entered for the polygon is connected to the first. It is created by the [**CreatePolygon**](#wwtcontrol-createpolygon-method) method.
 
-The Poly object inherits the properties of the [**Annotation**](#AnnotationObject) object.
+The Poly object inherits the properties of the [**Annotation**](#annotation-object) object.
 
 | Property | Description |
 | :-- |
-| [**Fill**](#PolyFill) | Specifies whether the polygon is filled or not. |
-| [**FillColor**](#PolyFillColor) | Specifies the fill color as an ARGB value. |
-| [**LineColor**](#PolyLineColor) | Specifies the line color as an ARGB value. |
-| [**LineWidth**](#PolyLineWidth) | Specifies the line width in pixels. |
+| [**Fill**](#poly-fill-property) | Specifies whether the polygon is filled or not. |
+| [**FillColor**](#poly-fillcolor-property) | Specifies the fill color as an ARGB value. |
+| [**LineColor**](#poly-linecolor-property) | Specifies the line color as an ARGB value. |
+| [**LineWidth**](#poly-linewidth-property) | Specifies the line width in pixels. |
 
 | Method | Description |
 | :-- |
-| [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |
+| [**AddPoint**](#poly-addpoint-method) | Adds a point to a polygon. |
 
 
 {% method -%}
@@ -585,19 +585,23 @@ expandPolygon(poly1, points);
 
 ## PolyLine Object
 
-The PolyLine object is used to render a polyline on the screen. A polyline cannot be filled, and is not a closed shape -- the last point is not connected back to the first. It is created by the [**CreatePolyLine**](#ViewCreatePolyLine) method.
+The PolyLine object is used to render a polyline on the screen. A polyline cannot be filled, and is not a closed shape -- the last point is not connected back to the first. It is created by the [**CreatePolyLine**](#wwtcontrol-create-polyline-method)
+#### Syntax
+) method.
 
-The PolyLine object inherits the properties of the [**Annotation**](#AnnotationObject) object.
+The PolyLine object inherits the properties of the [**Annotation**](#annotation-object)
+#### Syntax
+) object.
 
 
 | Property | Description |
 | :-- |
-| [**LineColor**](#PolyLineLineColor) | Specifies the line color as an ARGB value. |
-| [**LineWidth**](#PolyLineLineWidth) | Specifies the line width in pixels. |
+| [**LineColor**](#polyline-linecolor-property) | Specifies the line color as an ARGB value. |
+| [**LineWidth**](#polyline-linewidth-property) | Specifies the line width in pixels. |
 
 | Method | Description
 | :-- |
-| [**AddPoint**](#PolyLineAddPoint) | Adds a point to the polyline. |
+| [**AddPoint**](#polyline-addpoint-method) | Adds a point to the polyline. |
 
 
 {% method -%}
@@ -702,45 +706,45 @@ expandPolyLine(polyline1, points);
 
 ## Settings Object
 
-The Settings object is used to specify a range of settings for a [**WWTControl**](#WWTControl) object. The Settings object is created as part of the initialization of a WWTControl object.
+The Settings object is used to specify a range of settings for a [**WWTControl**](#wwtcontrol-object) object. The Settings object is created as part of the initialization of a WWTControl object.
 
-The Settings object is referenced from the [**Settings**](#ViewSettings) property of the WWTControl object.
+The Settings object is referenced from the [**Settings**](#wwtcontrol-settings-property) property of the WWTControl object.
 
 | Property | Description |
 | :-- |
-| [**ConstellationBoundryColor**](#SettingsConstellationBoundryColor) | Specifies the constellation boundary color as an ARGB value. |
-| [**ConstellationFigureColor**](#SettingsConstellationFigureColor) | Specifies the constellation figure color as an ARGB value. |
-| [**ConstellationSelectionColor**](#SettingsConstellationSelectionColor) | Specifies the constellation selection color as an ARGB value. |
-| [**EclipticColor**](#SettingsEclipticColor) | Specifies the ecliptic color as an ARGB value. |
-| [**GridColor**](#SettingsGridColor) | Specifies the grid color as an ARGB value. |
-| [**LocalHorizonMode**](#SettingsLocalHorizonMode) | Specifies that the view should be from a local lat/long/alt position (for example, a city, or landmark). |
-| [**LocationAltitude**](#SettingsLocationAltitude) | Specifies the view location altitude in meters. |
-| [**LocationLat**](#SettingsLocationLat) | Specifies the view location latitude. |
-| [**LocationLng**](#SettingsLocationLng) | Specifies the view location longitude. |
-| [**ShowClouds**](#SettingsShowClouds) | Specifies whether to show the Earth's cloud layer. |
-| [**ShowConstellationBoundries**](#SettingsShowConstellationBoundries) | Specifies whether to show constellation boundaries. |
-| [**ShowConstellationFigures**](#SettingsShowConstellationFigures) | Specifies whether to show constellation figures. |
-| [**ShowConstellationSelection**](#SettingsShowConstellationSelection) | Specifies whether to show only the selected constellation. |
-| [**ShowCrosshairs**](#SettingsShowCrosshairs) | Specifies whether to show cross-hairs. |
-| [**ShowEcliptic**](#SettingsShowEcliptic) | Specifies whether to show the path of the Sun. |
-| [**ShowElevationModel**](#SettingsShowElevationModel) | Specifies whether to show the elevation model. |
-| [**ShowFieldOfView**](#SettingsShowFieldOfView) | Specifies whether to show the field of view box. |
-| [**ShowGrid**](#SettingsShowGrid) | Specifies whether to show the equatorial grid. |
-| [**ShowHorizon**](#SettingsShowHorizon) | Specifies whether to show the horizon. |
-| [**ShowHorizonPanorama**](#SettingsShowHorizonPanorama) | Specifies whether to show the panorama horizon. |
-| [**ShowMoonsAsPointSource**](#SettingsShowMoonsAsPointSource) | Specifies whether to show the moon as a point source. |
-| [**ShowSolarSystem**](#SettingsShowSolarSystem) | Specifies whether to show the 3-D solar system view. |
-| [**ShowUTCTime**](#SettingsShowUTCTime) | Specifies whether to show the time as a UTC value. |
-| [**SolarSystemCosmos**](#SettingsSolarSystemCosmos) | Specifies whether to show the solar system cosmos. |
-| [**SolarSystemLighting**](#SettingsSolarSystemLighting) | Specifies whether to show the lighting effect of the Sun on the solar system. |
-| [**SolarSystemMilkyWay**](#SettingsSolarSystemMilkyWay) | Specifies whether to show the Milky Way when showing the solar system. |
-| [**SolarSystemMultiRes**](#SettingsSolarSystemMultiRes) | Specifies whether to show the multi-resolution textures for the planets. |
-| [**SolarSystemOrbitColor**](#SettingsSolarSystemOrbitColor) | Specifies the solar system orbit color as an ARGB value. |
-| [**SolarSystemOrbits**](#SettingsSolarSystemOrbits) | Specifies whether to show the solar system orbits. |
-| [**SolarSystemOverlays**](#SettingsSolarSystemOverlays) | Specifies whether to show the solar system overlays. |
-| [**SolarSystemScale**](#SettingsSolarSystemScale) | Specifies how to scale the size of the Sun and the planets. |
-| [**SolarSystemStars**](#SettingsSolarSystemStars) | Specifies whether to render stars when showing the solar system. |
-| [**UserID**](#SettingsUserID) | Specifies the user ID as a Guid. |
+| [**ConstellationBoundryColor**](#settings-constellation-boundries-color-property) | Specifies the constellation boundary color as an ARGB value. |
+| [**ConstellationFigureColor**](#settings-constellation-figure-color-propoerty) | Specifies the constellation figure color as an ARGB value. |
+| [**ConstellationSelectionColor**](#settings-constellation-selection-color-property) | Specifies the constellation selection color as an ARGB value. |
+| [**EclipticColor**](#settings-eclipticcolor-property) | Specifies the ecliptic color as an ARGB value. |
+| [**GridColor**](#settings-gridcolor-property) | Specifies the grid color as an ARGB value. |
+| [**LocalHorizonMode**](#settings-localhorizonmode-property) | Specifies that the view should be from a local lat/long/alt position (for example, a city, or landmark). |
+| [**LocationAltitude**](#settings-locationaltitude-property) | Specifies the view location altitude in meters. |
+| [**LocationLat**](#settings-locationlat-property) | Specifies the view location latitude. |
+| [**LocationLng**](#settings-locationlng-property) | Specifies the view location longitude. |
+| [**ShowClouds**](#settings-showclouds-property) | Specifies whether to show the Earth's cloud layer. |
+| [**ShowConstellationBoundries**](#settings-showconstellationboundries-property) | Specifies whether to show constellation boundaries. |
+| [**ShowConstellationFigures**](#settings-showconstellationfigures-property) | Specifies whether to show constellation figures. |
+| [**ShowConstellationSelection**](#settings-showconstellationselection-property) | Specifies whether to show only the selected constellation. |
+| [**ShowCrosshairs**](#settings-showcrosshairs-property) | Specifies whether to show cross-hairs. |
+| [**ShowEcliptic**](#settings-showecliptic-property) | Specifies whether to show the path of the Sun. |
+| [**ShowElevationModel**](#settings-showelevationmodel-property) | Specifies whether to show the elevation model. |
+| [**ShowFieldOfView**](#settings-showfieldofview-property) | Specifies whether to show the field of view box. |
+| [**ShowGrid**](#settings-showgrid-property) | Specifies whether to show the equatorial grid. |
+| [**ShowHorizon**](#settings-showhorizon-property) | Specifies whether to show the horizon. |
+| [**ShowHorizonPanorama**](#settings-showhorizonpanorama-property) | Specifies whether to show the panorama horizon. |
+| [**ShowMoonsAsPointSource**](#settings-showmoonsaspointsource-property) | Specifies whether to show the moon as a point source. |
+| [**ShowSolarSystem**](#settings-showsolarsystem-property) | Specifies whether to show the 3-D solar system view. |
+| [**ShowUTCTime**](#settings-showutctime-property) | Specifies whether to show the time as a UTC value. |
+| [**SolarSystemCosmos**](#settings-solarsystemcosmos-property) | Specifies whether to show the solar system cosmos. |
+| [**SolarSystemLighting**](#settings-solarsystemlighting-property) | Specifies whether to show the lighting effect of the Sun on the solar system. |
+| [**SolarSystemMilkyWay**](#settings-solarsystemmilkyway-property) | Specifies whether to show the Milky Way when showing the solar system. |
+| [**SolarSystemMultiRes**](#settings-solarsystemmultires-property) | Specifies whether to show the multi-resolution textures for the planets. |
+| [**SolarSystemOrbitColor**](#settings-solarsystemorbitcolor-property) | Specifies the solar system orbit color as an ARGB value. |
+| [**SolarSystemOrbits**](#settings-solarsystemorbits-property) | Specifies whether to show the solar system orbits. |
+| [**SolarSystemOverlays**](#settings-solarsystemoverlays-property) | Specifies whether to show the solar system overlays. |
+| [**SolarSystemScale**](#settings-solarsystemscale-property) | Specifies how to scale the size of the Sun and the planets. |
+| [**SolarSystemStars**](#settings-solarsystemstars-property) | Specifies whether to render stars when showing the solar system. |
+| [**UserID**](#settings-userid-property) | Specifies the user ID as a Guid. |
 
 
 {% method -%}
@@ -886,7 +890,7 @@ The **LocalHorizonMode** property specifies that the view should be from a local
 
 #### Remarks
 
-This setting is equivalent to the **View > View from this location** checkbox, and must follow all calls to set the lat/long/alt position. To toggle the local horizon, use the [ShowHorizon Property](#SettingsShowHorizon).
+This setting is equivalent to the **View > View from this location** checkbox, and must follow all calls to set the lat/long/alt position. To toggle the local horizon, use the [ShowHorizon Property](#settings-showhorizon-property).
 
 {% sample lang="js" -%}
 #### Syntax
@@ -1733,16 +1737,20 @@ The WWTControl object does not inherit any classes that have exposed properties 
 | Property | Description |
 | :-- |
 | [**Fov**](#ViewFov) | Contains the field of view in degrees. |
-| [**Settings**](#ViewSettings) | Reference to the [**Settings**](#SettingsObject) object for the WWTControl. Note this object is created when the WWTControl object is created, so there is no specific call to create a Settings object. |
+| [**Settings**](#ViewSettings) | Reference to the [**Settings**](#settings-Object) object for the WWTControl. Note this object is created when the WWTControl object is created, so there is no specific call to create a Settings object. |
 | [**SmoothAnimation**](#ViewSmoothAnimation) | Specifies whether to pan smoothly or quickly to the new location. |
 
 | Method | Description |
 | :-- |
-| [**AddAnnotation**](#ViewAddAnnotation) | Adds an [**Annotation**](#AnnotationObject) object to the view. |
+| [**AddAnnotation**](#ViewAddAnnotation) | Adds an [**Annotation**](#annotation-object
+#### Syntax
+) object to the view. |
 | [**ClearAnnotations**](#ViewClearAnnotations) | Removes all annotations from the view. |
 | [**CreateCircle**](#ViewCreateCircle) | Creates a [**Circle**](#circle-object) object, and returns a reference to the created object. |
 | [**CreatePolygon**](#ViewCreatePolygon) | Creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object. |
-| [**CreatePolyLine**](#ViewCreatePolyLine) | Creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object. |
+| [**CreatePolyLine**](#wwtcontrol-create-polyline-method
+#### Syntax
+) | Creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object. |
 | [**GetDec**](#ViewGetDec) | Retrieves the declination for the view. |
 | [**GetRA**](#ViewGetRA) | Retrieves the right ascension for the view. |
 | [**GotoRaDecZoom**](#ViewGoto) | Used to go to a new viewing position. |
@@ -1813,13 +1821,13 @@ function FovDec() {
 {% method -%}
 ### WWTControl Settings Property
 
-The **Settings** property references the [**Settings**](#SettingsObject) object for the WWTControl.
+The **Settings** property references the [**Settings**](#settings-Object) object for the WWTControl.
 
 
 
 #### Remarks
 
-This property is read-only, though individual settings can have their values set (refer to the [**Settings**](#SettingsObject) object).
+This property is read-only, though individual settings can have their values set (refer to the [**Settings**](#settings-Object) object).
 
 {% sample lang="js" -%}
 #### Syntax
@@ -1878,12 +1886,16 @@ wwtControl.set_smoothAnimation(true);
 {% method -%}
 ### WWTControl AddAnnotation Method
 
-The **AddAnnotation** method adds an [**Annotation**](#AnnotationObject) object to the view.
+The **AddAnnotation** method adds an [**Annotation**](#annotation-object
+#### Syntax
+) object to the view.
 
 #### Parameters
 
 _annotation_
-  Specifies the [**Annotation** ](#AnnotationObject)object.
+  Specifies the [**Annotation** ](#annotation-object
+#### Syntax
+)object.
 
 #### Return Values
 
@@ -1995,7 +2007,9 @@ This method returns a reference to a [**Circle**](#circle-object) object.
 
 #### Remarks
 
-In addition to creating the circle an [**Annotation**](#AnnotationObject) object (which is inherited by the Circle object) will be created to provide supporting text.
+In addition to creating the circle an [**Annotation**](#annotation-object
+#### Syntax
+) object (which is inherited by the Circle object) will be created to provide supporting text.
 
 
 {% sample lang="js" -%}
@@ -2054,7 +2068,9 @@ This method returns a reference to the created [**Poly**](#poly-object) object.
 
 #### Remarks
 
-In addition to creating the polygon an [**Annotation**](#AnnotationObject) object (which is inherited by the poly object) will be created to provide supporting text.
+In addition to creating the polygon an [**Annotation**](#annotation-object
+#### Syntax
+) object (which is inherited by the poly object) will be created to provide supporting text.
 
 {% sample lang="js" -%}
 #### Syntax
@@ -2115,7 +2131,9 @@ This method returns a reference to a [**PolyLine**](#polyline-object) object.
 
 #### Remarks
 
-In addition to creating the polyline, an [**Annotation**](#AnnotationObject) object (which is inherited by the polyline object) will be created to provide supporting text.
+In addition to creating the polyline, an [**Annotation**](#annotation-object
+#### Syntax
+) object (which is inherited by the polyline object) will be created to provide supporting text.
 
 The rendering of a polyline will simply take each point in the list and draw a line to the next. In order to have a more complex polyline, for example with forks with two or more lines coming from a single point, then there are two main options, either create several polyline objects sharing a single point, or backtrack over points after reaching the end of one fork, and then continuing to add points along the second fork, and so on.
 
@@ -2553,7 +2571,9 @@ The **RemoveAnnotation** method removes the specified annotation from the view.
 #### Parameters
 
 _annotation_
-  The [**Annotation**](#AnnotationObject) object to be removed.
+  The [**Annotation**](#annotation-object
+#### Syntax
+) object to be removed.
 
 #### Return Values
 
