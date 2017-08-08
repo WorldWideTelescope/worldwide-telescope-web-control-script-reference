@@ -58,4 +58,4 @@ Setting up a web page to host the WorldWide Telescope web control is simple. The
        <div id="WWTCanvas" style="width:750px; height:750px; border-style: none; border-width: 0px;">
    ```
 
-Now that you have the basics, take a look at other run-able samples in the [Web Control Samples](webcontrolobjects.md#web-control-samples) section. Start out with the [WWT Web Client Simple sample](http://www.worldwidetelescope.org/docs/worldwidetelescopewebcontrolscriptreference.html#WWTWebClientSimple), which takes our basic example a step further and adds a simple user interface to the mix.
+Now that you have the basics, take a look at other run-able samples in the [Web Control Samples](samples.md) section. Start out with the [WWT Web Client Simple sample](http://www.worldwidetelescope.org/docs/worldwidetelescopewebcontrolscriptreference.html#WWTWebClientSimple), which takes our basic example a step further and adds a simple user interface to the mix.

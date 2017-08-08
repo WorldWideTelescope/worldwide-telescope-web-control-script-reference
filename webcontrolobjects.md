@@ -713,7 +713,7 @@ The Settings object is referenced from the [**Settings**](#wwtcontrol-settings-p
 | Property | Description |
 | :-- |
 | [**ConstellationBoundryColor**](#settings-constellationboundrycolor-property) | Specifies the constellation boundary color as an ARGB value. |
-| [**ConstellationFigureColor**](#settings-constellationfigurecolor-propoerty) | Specifies the constellation figure color as an ARGB value. |
+| [**ConstellationFigureColor**](#settings-constellationfigurecolor-property) | Specifies the constellation figure color as an ARGB value. |
 | [**ConstellationSelectionColor**](#settings-constellationselectioncolor-property) | Specifies the constellation selection color as an ARGB value. |
 | [**EclipticColor**](#settings-eclipticcolor-property) | Specifies the ecliptic color as an ARGB value. |
 | [**GridColor**](#settings-gridcolor-property) | Specifies the grid color as an ARGB value. |
@@ -1742,29 +1742,29 @@ The WWTControl object does not inherit any classes that have exposed properties 
 
 | Method | Description |
 | :-- |
-| [**AddAnnotation**](#wwtcontrol-addannotation-property) | Adds an [**Annotation**](#annotation-object-property) object to the view. |
-| [**ClearAnnotations**](#wwtcontrol-clearannotations-property) | Removes all annotations from the view. |
-| [**CreateCircle**](#wwtcontrol-createcircle-property) | Creates a [**Circle**](#circle-object) object, and returns a reference to the created object. |
-| [**CreatePolygon**](#wwtcontrol-createpolygon-property) | Creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object. |
+| [**AddAnnotation**](#wwtcontrol-addannotation-method) | Adds an [**Annotation**](#annotation-object) object to the view. |
+| [**ClearAnnotations**](#wwtcontrol-clearannotations-method) | Removes all annotations from the view. |
+| [**CreateCircle**](#wwtcontrol-createcircle-method) | Creates a [**Circle**](#circle-object) object, and returns a reference to the created object. |
+| [**CreatePolygon**](#wwtcontrol-createpolygon-method) | Creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object. |
 | [**CreatePolyLine**](#wwtcontrol-createpolyline-method) | Creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object. |
-| [**GetDec**](#wwtcontrol-getdec-property) | Retrieves the declination for the view. |
-| [**GetRA**](#wwtcontrol-getra-property) | Retrieves the right ascension for the view. |
-| [**GotoRaDecZoom**](#wwtcontrol-goto-property) | Used to go to a new viewing position. |
-| [**HideUI**](#wwtcontrol-hideui-property) | Specifies whether to hide the UI for the view. |
-| [**LoadImageCollection**](#wwtcontrol-loadimagecollection-property) | Used to load a WTML collection file, containing links to foreground and background images. |
-| [**LoadTour**](#wwtcontrol-loadtour-property) | Used to load and start a tour. |
-| [**LoadVOTable**](#wwtcontrol-loadvotable-property) | Used to load a VO (Virtual Observatory) table. |
-| [**PlayTour**](#wwtcontrol-playtour-property) | Used to restart a tour from the beginning. |
-| [**RemoveAnnotation**](#wwtcontrol-removeannotation-property) | Removes the specified annotation from the view. |
-| [**SetBackgroundImageByName**](#wwtcontrol-setbackgroundimagebyname-property) | Loads an image to use as the view background. |
-| [**SetForegroundImageByName**](#wwtcontrol-setforegroundimagebyname-property) | Loads an image to use as the view foreground. |
-| [**SetForegroundOpacity**](#wwtcontrol-setforegroundopacity-property) | Specifies the opacity of the entire foreground image, which can be useful when visually comparing the foreground and background images. |
-| [**StopTour**](#wwtcontrol-stoptour-property) | Used to stop and exit a tour. |
+| [**GetDec**](#wwtcontrol-getdec-method) | Retrieves the declination for the view. |
+| [**GetRA**](#wwtcontrol-getra-method) | Retrieves the right ascension for the view. |
+| [**GotoRaDecZoom**](#wwtcontrol-goto-method) | Used to go to a new viewing position. |
+| [**HideUI**](#wwtcontrol-hideui-method) | Specifies whether to hide the UI for the view. |
+| [**LoadImageCollection**](#wwtcontrol-loadimagecollection-method) | Used to load a WTML collection file, containing links to foreground and background images. |
+| [**LoadTour**](#wwtcontrol-loadtour-method) | Used to load and start a tour. |
+| [**LoadVOTable**](#wwtcontrol-loadvotable-method) | Used to load a VO (Virtual Observatory) table. |
+| [**PlayTour**](#wwtcontrol-playtour-method) | Used to restart a tour from the beginning. |
+| [**RemoveAnnotation**](#wwtcontrol-removeannotation-method) | Removes the specified annotation from the view. |
+| [**SetBackgroundImageByName**](#wwtcontrol-setbackgroundimagebyname-method) | Loads an image to use as the view background. |
+| [**SetForegroundImageByName**](#wwtcontrol-setforegroundimagebyname-method) | Loads an image to use as the view foreground. |
+| [**SetForegroundOpacity**](#wwtcontrol-setforegroundopacity-method) | Specifies the opacity of the entire foreground image, which can be useful when visually comparing the foreground and background images. |
+| [**StopTour**](#wwtcontrol-stoptour-method) | Used to stop and exit a tour. |
 
 
 | Event | Description |
 | :-- |
-| [**AnnotationClicked**](#wwtcontrolannotationclicked-event) | Fired when an Annotation object is clicked on. Note the spelling error! |
+| [**AnnotationClicked**](#wwtcontrol-annotationclicked-event) | Fired when an Annotation object is clicked on. Note the spelling error! |
 | [**wwtArrived**](#wwtcontrol-arrived-event) | Fired when a change to the view from a drag, zoom, or goto comes to a halt. |
 | [**wwtClick**](#wwtcontrol-click-event) | Fired when the left mouse button is clicked. |
 | [**wwtReady**](#wwtcontrol-ready-event) | Fired when the web client is initialized. |
