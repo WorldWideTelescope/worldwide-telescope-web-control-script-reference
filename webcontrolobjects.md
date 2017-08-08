@@ -31,16 +31,18 @@ The Annotation Object is inherited by the [**Circle**](#circle-object) object, t
 
 The **ID** property contains a string for use by the web client.
 
-#### Syntax
+#### Remarks
+
+This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#annotation-clicked) event.
+
 {% sample lang="js" -%}
+
+#### Syntax
+
 ```js
 Annotation.set_id([string])
 [string] Annotation.get_id()
 ```
-
-#### Remarks
-
-This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#annotation-clicked) event.
 
 #### Example Code
 
