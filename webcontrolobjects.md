@@ -425,7 +425,7 @@ The Poly object inherits the properties of the [**Annotation**](#AnnotationObjec
 | Method | Description |
 | :-- |
 | [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |
-{% endmethod %}
+
 
 
 {% method -%}
@@ -1479,16 +1479,17 @@ Note: This feature is not implemented.
 
 The **SolarSystemMilkyWay** property specifies whether to show the Milky Way when showing the solar system.
 
+
+#### Remarks
+
+This setting is equivalent to the **View > Milky Way** checkbox.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemMilkyWay([Bool])
 [Bool] wwtControl.settings.get_solarSystemMilkyWay()
 ```
-
-#### Remarks
-
-This setting is equivalent to the **View > Milky Way** checkbox.
 
 #### Example Code
 
@@ -1510,18 +1511,19 @@ Note: This feature is not implemented.
 
 The **SolarSystemMultiRes** property specifies whether to show the multi-resolution textures for the planets.
 
+#### Remarks
+
+Multi-resolution textures are very detailed images of a planet surface. If these are not enabled then it does not make sense to zoom close to the surface. If they are enabled then individual buildings, for example, can be located.
+
+This setting is equivalent to the **Settings > Multi-Res Solar System Bodies** checkbox.
+
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemMultiRes([Bool])
 [Bool] wwtControl.settings.get_solarSystemMultiRes()
 ```
-
-#### Remarks
-
-Multi-resolution textures are very detailed images of a planet surface. If these are not enabled then it does not make sense to zoom close to the surface. If they are enabled then individual buildings, for example, can be located.
-
-This setting is equivalent to the **Settings > Multi-Res Solar System Bodies** checkbox.
 
 #### Example Code
 
@@ -1546,16 +1548,18 @@ Note: This feature is not implemented.
 
 The **SolarSystemOrbitColor** property specifies the solar system orbit colors as an ARGB value.
 
+
+#### Remarks
+
+The default orbit color is dark gray.
+
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemOrbitColor([uint])
 [uint] wwtControl.settings.get_solarSystemOrbitColor()
 ```
-
-#### Remarks
-
-The default orbit color is dark gray.
 
 #### Example Code
 
@@ -1574,16 +1578,17 @@ Note: This feature is not implemented.
 
 The **SolarSystemOrbits** property specifies whether to show the orbits when showing the solar system.
 
+
+#### Remarks
+
+This setting is equivalent to the **View > Orbits** checkbox.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemOrbits([Bool])
 [Bool] wwtControl.settings.get_solarSystemOrbits()
 ```
-
-#### Remarks
-
-This setting is equivalent to the **View > Orbits** checkbox.
 
 #### Example Code
 
