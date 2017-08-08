@@ -1,8 +1,8 @@
-## Web Control Objects
+(#wwtcontrol-## Web Control Objects
 
 The [*WWTControl**](#wwtcontrol-object) object is the principal object, the other objects are created on initialization of the object, or can be created by the methods provided by this object.
 
-Note that the **Example Code** listed for each property or method is _not_ code that will run on its own, just an example of how to use the property or method within a script. Run-able samples are listed and linked to in the [Web Control Samples](#webcontrol-samples) section.
+Note that the **Example Code** listed for each property or method is _not_ code that will run on its own, just an example of how to use the property or method within a script. Run-able samples are listed and linked to in the [Web Control Samples](#web-control-samples) section.
 
 | Object | Description |
 | :-- | :-- |
@@ -188,7 +188,7 @@ circle.set_tag("001");
 
 ## Circle Object
 
-The Circle object is used to render a circle on the screen. It is created by the [**CreateCircle**](#wwtcontrol-create-circle-method) method.
+The Circle object is used to render a circle on the screen. It is created by the [**CreateCircle**](#wwtcontrol-createcircle-method) method.
 
 The Circle object inherits the properties of the [**Annotation**](#annotation-object) object.
 
@@ -207,7 +207,7 @@ The image shows a purple circle with a 2 pixel line, a green polygon and a light
 
 | Method | Description |
 | :-- |
-| [**SetCenter**](#circle-setcenter-property) | Specifies the center coordinates of the circle. |
+| [**SetCenter**](#circle-setcenter-method) | Specifies the center coordinates of the circle. |
 
 
 {% method -%}
@@ -585,7 +585,7 @@ expandPolygon(poly1, points);
 
 ## PolyLine Object
 
-The PolyLine object is used to render a polyline on the screen. A polyline cannot be filled, and is not a closed shape -- the last point is not connected back to the first. It is created by the [**CreatePolyLine**](#wwtcontrol-create-polyline-method)
+The PolyLine object is used to render a polyline on the screen. A polyline cannot be filled, and is not a closed shape -- the last point is not connected back to the first. It is created by the [**CreatePolyLine**](#wwtcontrol-createpolyline-method)
 #### Syntax
 ) method.
 
@@ -712,9 +712,9 @@ The Settings object is referenced from the [**Settings**](#wwtcontrol-settings-p
 
 | Property | Description |
 | :-- |
-| [**ConstellationBoundryColor**](#settings-constellation-boundries-color-property) | Specifies the constellation boundary color as an ARGB value. |
-| [**ConstellationFigureColor**](#settings-constellation-figure-color-propoerty) | Specifies the constellation figure color as an ARGB value. |
-| [**ConstellationSelectionColor**](#settings-constellation-selection-color-property) | Specifies the constellation selection color as an ARGB value. |
+| [**ConstellationBoundryColor**](#settings-constellationboundrycolor-property) | Specifies the constellation boundary color as an ARGB value. |
+| [**ConstellationFigureColor**](#settings-constellationfigurecolor-propoerty) | Specifies the constellation figure color as an ARGB value. |
+| [**ConstellationSelectionColor**](#settings-constellationselectioncolor-property) | Specifies the constellation selection color as an ARGB value. |
 | [**EclipticColor**](#settings-eclipticcolor-property) | Specifies the ecliptic color as an ARGB value. |
 | [**GridColor**](#settings-gridcolor-property) | Specifies the grid color as an ARGB value. |
 | [**LocalHorizonMode**](#settings-localhorizonmode-property) | Specifies that the view should be from a local lat/long/alt position (for example, a city, or landmark). |
@@ -1736,42 +1736,38 @@ The WWTControl object does not inherit any classes that have exposed properties 
 
 | Property | Description |
 | :-- |
-| [**Fov**](#ViewFov) | Contains the field of view in degrees. |
-| [**Settings**](#ViewSettings) | Reference to the [**Settings**](#settings-Object) object for the WWTControl. Note this object is created when the WWTControl object is created, so there is no specific call to create a Settings object. |
-| [**SmoothAnimation**](#ViewSmoothAnimation) | Specifies whether to pan smoothly or quickly to the new location. |
+| [**Fov**](#wwtcontrol-fov-property) | Contains the field of view in degrees. |
+| [**Settings**](#wwtcontrol-settings-property) | Reference to the [**Settings**](#settings-object) object for the WWTControl. Note this object is created when the WWTControl object is created, so there is no specific call to create a Settings object. |
+| [**SmoothAnimation**](#wwtcontrol-smoothanimation-property) | Specifies whether to pan smoothly or quickly to the new location. |
 
 | Method | Description |
 | :-- |
-| [**AddAnnotation**](#ViewAddAnnotation) | Adds an [**Annotation**](#annotation-object
-#### Syntax
-) object to the view. |
-| [**ClearAnnotations**](#ViewClearAnnotations) | Removes all annotations from the view. |
-| [**CreateCircle**](#ViewCreateCircle) | Creates a [**Circle**](#circle-object) object, and returns a reference to the created object. |
-| [**CreatePolygon**](#ViewCreatePolygon) | Creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object. |
-| [**CreatePolyLine**](#wwtcontrol-create-polyline-method
-#### Syntax
-) | Creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object. |
-| [**GetDec**](#ViewGetDec) | Retrieves the declination for the view. |
-| [**GetRA**](#ViewGetRA) | Retrieves the right ascension for the view. |
-| [**GotoRaDecZoom**](#ViewGoto) | Used to go to a new viewing position. |
-| [**HideUI**](#ViewHideUI) | Specifies whether to hide the UI for the view. |
-| [**LoadImageCollection**](#ViewLoadImageCollection) | Used to load a WTML collection file, containing links to foreground and background images. |
-| [**LoadTour**](#ViewLoadTour) | Used to load and start a tour. |
-| [**LoadVOTable**](#ViewLoadVOTable) | Used to load a VO (Virtual Observatory) table. |
-| [**PlayTour**](#ViewPlayTour) | Used to restart a tour from the beginning. |
-| [**RemoveAnnotation**](#ViewRemoveAnnotation) | Removes the specified annotation from the view. |
-| [**SetBackgroundImageByName**](#ViewSetBackgroundImageByName) | Loads an image to use as the view background. |
-| [**SetForegroundImageByName**](#ViewSetForegroundImageByName) | Loads an image to use as the view foreground. |
-| [**SetForegroundOpacity**](#ViewSetForegroundOpacity) | Specifies the opacity of the entire foreground image, which can be useful when visually comparing the foreground and background images. |
-| [**StopTour**](#ViewStopTour) | Used to stop and exit a tour. |
+| [**AddAnnotation**](#wwtcontrol-addannotation-property) | Adds an [**Annotation**](#annotation-object-property) object to the view. |
+| [**ClearAnnotations**](#wwtcontrol-clearannotations-property) | Removes all annotations from the view. |
+| [**CreateCircle**](#wwtcontrol-createcircle-property) | Creates a [**Circle**](#circle-object) object, and returns a reference to the created object. |
+| [**CreatePolygon**](#wwtcontrol-createpolygon-property) | Creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object. |
+| [**CreatePolyLine**](#wwtcontrol-createpolyline-method) | Creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object. |
+| [**GetDec**](#wwtcontrol-getdec-property) | Retrieves the declination for the view. |
+| [**GetRA**](#wwtcontrol-getra-property) | Retrieves the right ascension for the view. |
+| [**GotoRaDecZoom**](#wwtcontrol-goto-property) | Used to go to a new viewing position. |
+| [**HideUI**](#wwtcontrol-hideui-property) | Specifies whether to hide the UI for the view. |
+| [**LoadImageCollection**](#wwtcontrol-loadimagecollection-property) | Used to load a WTML collection file, containing links to foreground and background images. |
+| [**LoadTour**](#wwtcontrol-loadtour-property) | Used to load and start a tour. |
+| [**LoadVOTable**](#wwtcontrol-loadvotable-property) | Used to load a VO (Virtual Observatory) table. |
+| [**PlayTour**](#wwtcontrol-playtour-property) | Used to restart a tour from the beginning. |
+| [**RemoveAnnotation**](#wwtcontrol-removeannotation-property) | Removes the specified annotation from the view. |
+| [**SetBackgroundImageByName**](#wwtcontrol-setbackgroundimagebyname-property) | Loads an image to use as the view background. |
+| [**SetForegroundImageByName**](#wwtcontrol-setforegroundimagebyname-property) | Loads an image to use as the view foreground. |
+| [**SetForegroundOpacity**](#wwtcontrol-setforegroundopacity-property) | Specifies the opacity of the entire foreground image, which can be useful when visually comparing the foreground and background images. |
+| [**StopTour**](#wwtcontrol-stoptour-property) | Used to stop and exit a tour. |
 
 
 | Event | Description |
 | :-- |
-| [**AnnotationClicked**](#AnnotationClicked) | Fired when an Annotation object is clicked on. Note the spelling error! |
-| [**wwtArrived**](#wwtArrived) | Fired when a change to the view from a drag, zoom, or goto comes to a halt. |
-| [**wwtClick**](#wwtClick) | Fired when the left mouse button is clicked. |
-| [**wwtReady**](#wwtReady) | Fired when the web client is initialized. |
+| [**AnnotationClicked**](#wwtcontrolannotationclicked-event) | Fired when an Annotation object is clicked on. Note the spelling error! |
+| [**wwtArrived**](#wwtcontrol-arrived-event) | Fired when a change to the view from a drag, zoom, or goto comes to a halt. |
+| [**wwtClick**](#wwtcontrol-click-event) | Fired when the left mouse button is clicked. |
+| [**wwtReady**](#wwtcontrol-ready-event) | Fired when the web client is initialized. |
 
 {% method -%}
 ### WWTControl Fov Property
@@ -1821,13 +1817,13 @@ function FovDec() {
 {% method -%}
 ### WWTControl Settings Property
 
-The **Settings** property references the [**Settings**](#settings-Object) object for the WWTControl.
+The **Settings** property references the [**Settings**](#settings-object) object for the WWTControl.
 
 
 
 #### Remarks
 
-This property is read-only, though individual settings can have their values set (refer to the [**Settings**](#settings-Object) object).
+This property is read-only, though individual settings can have their values set (refer to the [**Settings**](#settings-object) object).
 
 {% sample lang="js" -%}
 #### Syntax
@@ -1886,16 +1882,12 @@ wwtControl.set_smoothAnimation(true);
 {% method -%}
 ### WWTControl AddAnnotation Method
 
-The **AddAnnotation** method adds an [**Annotation**](#annotation-object
-#### Syntax
-) object to the view.
+The **AddAnnotation** method adds an [**Annotation**](#annotation-object) object to the view.
 
 #### Parameters
 
 _annotation_
-  Specifies the [**Annotation** ](#annotation-object
-#### Syntax
-)object.
+  Specifies the [**Annotation** ](#annotation-object) object.
 
 #### Return Values
 
@@ -2007,9 +1999,7 @@ This method returns a reference to a [**Circle**](#circle-object) object.
 
 #### Remarks
 
-In addition to creating the circle an [**Annotation**](#annotation-object
-#### Syntax
-) object (which is inherited by the Circle object) will be created to provide supporting text.
+In addition to creating the circle an [**Annotation**](#annotation-object) object (which is inherited by the Circle object) will be created to provide supporting text.
 
 
 {% sample lang="js" -%}
@@ -2068,9 +2058,7 @@ This method returns a reference to the created [**Poly**](#poly-object) object.
 
 #### Remarks
 
-In addition to creating the polygon an [**Annotation**](#annotation-object
-#### Syntax
-) object (which is inherited by the poly object) will be created to provide supporting text.
+In addition to creating the polygon an [**Annotation**](#annotation-object) object (which is inherited by the poly object) will be created to provide supporting text.
 
 {% sample lang="js" -%}
 #### Syntax
@@ -2131,9 +2119,7 @@ This method returns a reference to a [**PolyLine**](#polyline-object) object.
 
 #### Remarks
 
-In addition to creating the polyline, an [**Annotation**](#annotation-object
-#### Syntax
-) object (which is inherited by the polyline object) will be created to provide supporting text.
+In addition to creating the polyline, an [**Annotation**](#annotation-object) object (which is inherited by the polyline object) will be created to provide supporting text.
 
 The rendering of a polyline will simply take each point in the list and draw a line to the next. In order to have a more complex polyline, for example with forks with two or more lines coming from a single point, then there are two main options, either create several polyline objects sharing a single point, or backtrack over points after reaching the end of one fork, and then continuing to add points along the second fork, and so on.
 
@@ -2241,7 +2227,7 @@ This method returns a double containing the right ascension in decimal degrees.
 
 #### Remarks
 
-Refer to the remarks for [**GetDec**](#ViewGetDec).
+Refer to the remarks for [**GetDec**](#wwtcontrol-getdec-property).
 
 {% sample lang="js" -%}
 #### Syntax
@@ -2409,7 +2395,7 @@ This method does not return a value.
 
 For a description of the content of image collection files, refer to the [WorldWide Telescope Data Files Reference](WorldWideTelescopeDataFilesReference.html) document.
 
-After the collection is loaded, the images can be referenced by their string name using the [**SetBackgroundImageByName**](#ViewSetBackgroundImageByName) and [**SetForegroundImageByName**](#ViewSetForegroundImageByName) methods.
+After the collection is loaded, the images can be referenced by their string name using the [**SetBackgroundImageByName**](#wwtcontrol-setbackgroundimagebyname-method) and [**SetForegroundImageByName**](#wwtcontrol-setforegroundimagebyname-method) methods.
 
 
 {% sample lang="js" -%}
@@ -2538,7 +2524,7 @@ This method does not return a value.
 
 #### Remarks
 
-Refer to the remarks for the [**LoadTour**](#ViewLoadTour) method.
+Refer to the remarks for the [**LoadTour**](#wwtcontrol-loadtour-method) method.
 
 
 {% sample lang="js" -%}
@@ -2571,9 +2557,7 @@ The **RemoveAnnotation** method removes the specified annotation from the view.
 #### Parameters
 
 _annotation_
-  The [**Annotation**](#annotation-object
-#### Syntax
-) object to be removed.
+  The [**Annotation**](#annotation-object) object to be removed.
 
 #### Return Values
 
@@ -2646,7 +2630,7 @@ This method does not return a value.
 #### Remarks
 
 The string used as the name parameter for this method should be present as a **Place** name in the .WTML
- file loaded by the [**LoadImageCollection**](#ViewLoadImageCollection) method. Typically background images come from _Survey_ data, such as visible light, x-ray, infrared, ultraviolet, gamma, and so on. In the UI of WorldWide Telescope, the background image is selected with the **Imagery** entry, and if there is a foreground image, the **Image Crossfade** slider will appear.
+ file loaded by the [**LoadImageCollection**](#wwtcontrol-loadimagecollection-method) method. Typically background images come from _Survey_ data, such as visible light, x-ray, infrared, ultraviolet, gamma, and so on. In the UI of WorldWide Telescope, the background image is selected with the **Imagery** entry, and if there is a foreground image, the **Image Crossfade** slider will appear.
 
 A background image need not cover the whole sky, and can in fact be a simple study of one object in space. In this case the rest of the sky will be dark and empty, except for the solar system which is not considered foreground or background.
 
@@ -2692,9 +2676,9 @@ This method does not return a value.
 #### Remarks
 
 The string used as the name parameter for this method should be present as a **Place** name in the .WTML
- file loaded by the [**LoadImageCollection**](#ViewLoadImageCollection) method. There can be only one foreground image and only one background image rendered at any one time. The _typical_ use is to render studies as foreground images on top of a survey as a background image.
+ file loaded by the [**LoadImageCollection**](#wwtcontrol-loadimagecollection-method) method. There can be only one foreground image and only one background image rendered at any one time. The _typical_ use is to render studies as foreground images on top of a survey as a background image.
 
-If the opacity of the foreground image is solid, the background image will not be visible underneath. However if the [**SetForegroundOpacity**](#ViewSetForegroundOpacity) method is used to add some transparency, then both foreground and background images will be visible, and can be compared. Typical use of these two layers is to load a visual survey as either foreground or background, and then to compare it with an x-ray, heat or image of another non-visible wavelength, enabling a visual comparison between the two.
+If the opacity of the foreground image is solid, the background image will not be visible underneath. However if the [**SetForegroundOpacity**](#wwtcontrol-setforegroundopacity-method) method is used to add some transparency, then both foreground and background images will be visible, and can be compared. Typical use of these two layers is to load a visual survey as either foreground or background, and then to compare it with an x-ray, heat or image of another non-visible wavelength, enabling a visual comparison between the two.
 
 In the UI of WorldWide Telescope the **Explore > Open > Collection** menu selection is typically used to load foreground images. If the WTML collection file explicitly defines a study as a background, or a survey as foreground, then this menu selection can be used to reverse the normal process. However, by default, studies loaded this way are treated as foreground, surveys as background.
 
@@ -2844,7 +2828,7 @@ This method does not return a value.
 
 #### Remarks
 
-This setting enables some see-through in the foreground image, to enable a comparison with the background image. Note that if the foreground image is a .png file, then some transparency information is usually held within the file. The [**SetForegroundImageByName**](#ViewSetForegroundImageByName) method sets the foreground opacity to 1.0 each time a new image is loaded.
+This setting enables some see-through in the foreground image, to enable a comparison with the background image. Note that if the foreground image is a .png file, then some transparency information is usually held within the file. The [**SetForegroundImageByName**](#wwtcontrol-setforegroundimagebyname-method) method sets the foreground opacity to 1.0 each time a new image is loaded.
 
 {% sample lang="js" -%}
 #### Syntax
@@ -2882,7 +2866,7 @@ This method does not return a value.
 
 #### Remarks
 
-After a tour has been stopped with this call, it cannot be restarted from the position it was stopped at. [**PlayTour**](#ViewPlayTour) (which restarts a tour) will not work after a tour has been stopped. Also refer to the remarks for [**LoadTour**](#ViewLoadTour).
+After a tour has been stopped with this call, it cannot be restarted from the position it was stopped at. [**PlayTour**](#wwtcontrol-playtour-method) (which restarts a tour) will not work after a tour has been stopped. Also refer to the remarks for [**LoadTour**](#wwtcontrol-loadtour-method).
 
 {% sample lang="js" -%}
 #### Syntax
