@@ -434,7 +434,11 @@ The Poly object inherits the properties of the [**Annotation**](#AnnotationObjec
 
 | Method | Description |
 | :-- |
-| [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |{% endmethod %}
+| [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |
+{% endmethod %}
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Poly Fill Property
@@ -1093,7 +1097,8 @@ wwtControl.settings.set_showConstellationBoundries(true);
 
 ![Boundaries](images/Boundarys.jpg)
 
-The constellation boundaries are shown in blue, except for the selected constellation, with its boundary in yellow.{% endmethod %}
+The constellation boundaries are shown in blue, except for the selected constellation, with its boundary in yellow.
+{% endmethod %}
 
 {% method -%}
 ### Settings ShowConstellationFigures Property
@@ -1122,7 +1127,8 @@ wwtControl.settings.set_showConstellationFigures(true);
 
 ![Figures](images/Figures.jpg)
 
-The constellation figures.{% endmethod %}
+The constellation figures.
+{% endmethod %}
 
 {% method -%}
 ### Settings ShowConstellationSelection Property
@@ -1151,7 +1157,8 @@ wwtControl.settings.set_showConstellationSelection(true);
 
 ![Selection](images/Selection.jpg)
 
-The selected constellation.{% endmethod %}
+The selected constellation.
+{% endmethod %}
 
 {% method -%}
 ### Settings ShowCrosshairs Property
@@ -1180,7 +1187,10 @@ wwtControl.settings.set_showCrosshairs(true);
 
 ![Crosshairs](images/CrossHairs.jpg)
 
-The crosshairs, or reticle, shown with Mars in view.{% endmethod %}
+The crosshairs, or reticle, shown with Mars in view.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings ShowEcliptic Property
@@ -1242,7 +1252,10 @@ The Himalayan mountains, shown without elevation data.
 
 ![Himalayas model](images/ElevationModel.jpg)
 
-The Himalayan mountains, with elevation data.{% endmethod %}
+The Himalayan mountains, with elevation data.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings ShowFieldOfView Property
@@ -1272,7 +1285,9 @@ wwtControl.settings.set_showFieldOfView(true);
 ```
 
 ![FOV](images/FOV.jpg)
-Gamma Pegasi shown with the Field of View Indicator box.{% endmethod %}
+Gamma Pegasi shown with the Field of View Indicator box.
+{% endmethod %}
+
 
 {% method -%}
 ### Settings ShowGrid Property
@@ -1282,7 +1297,6 @@ The **ShowGrid** property specifies whether to show the equatorial grid.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtcontrol.settings.set_showGrid([Bool])
 [Bool] wwtcontrol.settings.get_showGrid()
@@ -1300,7 +1314,8 @@ wwtControl.settings.set_showGrid(true);
 ```
 
 ![Equatorial Grid](images/EGrid.jpg)
-The Equatorial grid shown, looking North, with the Hydrogen Alpha Full Sky Map as the data source. |{% endmethod %}
+The Equatorial grid shown, looking North, with the Hydrogen Alpha Full Sky Map as the data source. |
+{% endmethod %}
 
 {% method -%}
 ### Settings ShowHorizon Property
@@ -1505,7 +1520,10 @@ wwtControl.settings.set_solarSystemLighting(true);
 
 ![Saturn lighting](images/SaturnLighting.jpg)
 
-The lighting of the Sun on Saturn.{% endmethod %}
+The lighting of the Sun on Saturn.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings SolarSystemMilkyWay Property
@@ -1536,7 +1554,10 @@ wwtControl.settings.set_solarSystemMilkyWay(true);
 
 ![Saturn Milky Way](images/SaturnMilkyWay.jpg)
 
-The Milky Way appears to the left of Saturn.{% endmethod %}
+The Milky Way appears to the left of Saturn.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings SolarSystemMultiRes Property
@@ -1572,7 +1593,10 @@ wwtControl.settings.set_solarSystemMultiRes(true);
 The Caribbean in standard textures.
 ![Carribean hires](images/CarribeanHiRes.jpg)
 
-The Caribbean with multi-resolution textures.{% endmethod %}
+The Caribbean with multi-resolution textures.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings SolarSystemOrbitColor Property
@@ -1633,7 +1657,10 @@ wwtControl.settings.set_solarSystemOrbits(true);
 
 ![Saturn Orbits](images/SaturnOrbits.jpg)
 
-The orbits of all the solar system planets are shown in the SolarSystemOrbitColor.{% endmethod %}
+The orbits of all the solar system planets are shown in the SolarSystemOrbitColor.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings SolarSystemOverlays Property
@@ -1696,7 +1723,10 @@ wwtControl.settings.set_solarSystemScale(50);
 The Sun shown actual size.
 ![Sun full](images/SunFull.jpg)
 
-The Sun with maximum scaling.{% endmethod %}
+The Sun with maximum scaling.
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings SolarSystemStars Property
@@ -1727,7 +1757,11 @@ wwtControl.settings.set_solarSystemStars(true);
 
 ![Saturn Stars](images/SaturnStars.jpg) |
 
-| Saturn and the stars. |{% endmethod %}
+| Saturn and the stars. |
+{% endmethod %}
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### Settings UserID Property
@@ -1797,7 +1831,11 @@ The WWTControl object does not inherit any classes that have exposed properties 
 | [**AnnotationClicked**](#AnnotationClicked) | Fired when an Annotation object is clicked on. Note the spelling error! |
 | [**wwtArrived**](#wwtArrived) | Fired when a change to the view from a drag, zoom, or goto comes to a halt. |
 | [**wwtClick**](#wwtClick) | Fired when the left mouse button is clicked. |
-| [**wwtReady**](#wwtReady) | Fired when the web client is initialized. |{% endmethod %}
+| [**wwtReady**](#wwtReady) | Fired when the web client is initialized. |
+{% endmethod %}
+{% endmethod %}
+{% endmethod %}
+
 
 {% method -%}
 ### WWTControl Fov Property
