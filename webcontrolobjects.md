@@ -32,7 +32,7 @@ The Annotation Object is inherited by the [**Circle**](#circle-object) object, t
 The **ID** property contains a string for use by the web client.
 
 #### Syntax
-{% sample lang=js -%}
+{% sample lang="js" -%}
 ```js
 Annotation.set_id([string])
 [string] Annotation.get_id()
@@ -44,7 +44,7 @@ This string can be used to hold information (perhaps a URL or link to related in
 
 #### Example Code
 
-{% sample lang=js -%}
+{% sample lang="js" -%}
 ```js
 // Draw a circle at the center of the constellation Sagittarius
 circle.setCenter(286.485, -27.5231666666667);
