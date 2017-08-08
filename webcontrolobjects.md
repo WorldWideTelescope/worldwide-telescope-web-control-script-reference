@@ -27,6 +27,7 @@ The Annotation Object is inherited by the [**Circle**](#circle-object) object, t
 | [**Tag**](#annotation-tag) | Contains a string for use by the web client. |
 
 {% method -%}
+
 ### Annotation id property
 
 The **ID** property contains a string for use by the web client.
@@ -35,10 +36,9 @@ The **ID** property contains a string for use by the web client.
 
 This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#annotation-clicked) event.
 
-{% sample lang="js" -%}
-
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Annotation.set_id([string])
 [string] Annotation.get_id()
@@ -54,25 +54,26 @@ circle.set_id("Center of the Constellation Sagittarius");
 ```
 {% endmethod %}
 
+{% method -%}
 ### Annotation label property
 
 The **Label** property contains descriptive text for the annotation.
-
-#### Syntax
-
-
-```js
-Annotation.set_label([string])
-[string] Annotation.get_label()
-```
 
 #### Remarks
 
 The label text will be rendered if the [**ShowHoverLabel**](#annotation-showhoverlabel-property) property is set to true.
 
+#### Syntax
+
+{% sample lang="js" -%}
+```js
+Annotation.set_label([string])
+[string] Annotation.get_label()
+```
+
 #### Example Code
 
-
+{% sample lang="js" -%}
 ```js
 // Draw a circle at the center of the constellation Sagittarius
 circle.setCenter(286.485, -27.5231666666667);
@@ -80,22 +81,31 @@ circle.set_id("Center of the Constellation Sagittarius");
 circle.set_label("RA: 286.485, Dec: -27.5231666666667");
 ```
 
+{% endmethod %}
+
+{% method -%}
+
 ### Annotation opacity property
 
 The **Opacity** property specifies the opacity to be applied to the complete annotation.
-
-#### Syntax
-
-```js
-Annotation.set_opacity([double])
-[double] Annotation.get_opacity()
-```
 
 #### Remarks
 
 The default opacity setting is 1.0, which means that no transparency blending will be applied to the complete annotation. A value of 0.5, for example, will result in a 50% transparency blending being applied. Note that the color values for individual lines and fill color (which can include an alpha transparency value) are applied to the specific lines and shapes before the opacity value here is applied to the entire annotation.
 
+#### Syntax
+
+{% sample lang="js" -%}
+```js
+Annotation.set_opacity([double])
+[double] Annotation.get_opacity()
+```
+
 #### Example Code
+
+{% sample lang="js" -%}
+
+{% sample lang="js" -%}
 
 ```js
 // Set a solid fill color
@@ -105,23 +115,28 @@ circle.set_fill(true);
 circle.set_opacity(0.5);
 ```
 
+{% endmethod %}
+
+{% method -%}
+
 ### Annotation showHoverLabel property
 
 The **ShowHoverLabel** property specifies whether to render the label if the mouse is hovering over the annotation.
-
-#### Syntax
-
-```js
-Annotation.set_showHoverLabel([Bool])
-[Bool] Annotation.get_showHoverLabel()
-```
 
 #### Remarks
 
 The default setting is false.
 
+#### Syntax
+
+{% sample lang="js" -%}
+```js
+Annotation.set_showHoverLabel([Bool])
+[Bool] Annotation.get_showHoverLabel()
+```
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
 // Draw a circle at the center of the constellation Sagittarius
 circle.setCenter(286.485, -27.5231666666667);
@@ -129,45 +144,56 @@ circle.set_id("Center of the Constellation Sagittarius");
 circle.set_label("RA: 286.485, Dec: -27.5231666666667");
 circle.set_showHoverLabel(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Annotation center property
 
 The **Center** property contains a Vector3d object for use by the web client.
 
+#### Remarks
+
+This Vector3d object is used to hold the center position of the annotation object used by the web client.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Annotation.setCenter([Vector3d])
 [Vector3d] Annotation.getCenter()
 ```
 
-#### Remarks
-
-This Vector3d object is used to hold the center position of the annotation object used by the web client.
-
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
 var vector3d = new wwtlib.Vector3d(x, y, z);
 circle.setCenter(vector3d);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Annotation tag property
 
 The **Tag** property contains a string for use by the web client.
 
+#### Remarks
+
+This string can be used to hold information that is of use to the web client. The string is not used internally by WorldWide Telescope.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Annotation.set_tag([string])
 [string] Annotation.get_tag()
 ```
 
-#### Remarks
-
-This string can be used to hold information that is of use to the web client. The string is not used internally by WorldWide Telescope.
-
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 circle.set_tag("001");
@@ -196,155 +222,181 @@ The image shows a purple circle with a 2 pixel line, a green polygon and a light
 | :-- |
 | [**SetCenter**](#CircleSetCenter) | Specifies the center coordinates of the circle. |
 
+{% endmethod %}
+
+{% method -%}
 
 ### Circle Fill property
 
 The **Fill** property specifies whether the circle should be filled or not.
 
+#### Remarks
+
+The default is false.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Circle.set_fill([Bool])
 [Bool] Circle.get_fill();
 ```
 
-#### Remarks
-
-The default is false.
-
 #### Example Code
+{% sample lang="js" -%}
 
 ```js
 // Fill a circle with a transparent red
 circle.set_fill(true);
 circle.set_fillColor("0x55AA0000");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Circle FillColor Property
 
 The **FillColor** property specifies the fill color as an ARGB value.
 
+#### Remarks
+
+The default fill color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Circle.set_fillColor([string])
 [string] Circle.get_fillColor()
 ```
 
-#### Remarks
-
-The default fill color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
-
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Fill a circle with opaque green
 circle.set_fill(true);
 circle.set_fillColor("green");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Circle LineColor Property
 
 The **LineColor** property specifies the line color as an ARGB value.
 
+#### Remarks
+
+The default line color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Circle.set_lineColor([string])
 [string] Circle.get_lineColor()
 ```
 
-#### Remarks
-
-The default line color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
-
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Draw a circle in opaque dark gray
 circle.set_lineColor("0xFF555555");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Circle LineWidth Property
 
 The **LineWidth** property specifies the line width in pixels.
 
+#### Remarks
+
+The default line width is 1 pixel.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Circle.set_lineWidth([double])
 [double] Circle.get_lineWidth()
 ```
 
-#### Remarks
-
-The default line width is 1 pixel.
-
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
 // Double the default line width
 circle.set_lineWidth(2);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Circle Radius Property
 
 The **Radius** property specifies the circle radius.
 
+#### Remarks
+
+If the [**SkyRelative**](#CircleSkyRelative) property is true, then the radius units are degrees of arc, if not then the units are pixels. The default radius is 10.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Circle.set_radius([double])
 [double] Circle.get_radius()
 ```
 
-#### Remarks
-
-If the [**SkyRelative**](#CircleSkyRelative) property is true, then the radius units are degrees of arc, if not then the units are pixels. The default radius is 10.
-
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
 // Draw a fixed circle with a radius of 25 pixels
 circle.set_skyRelative(false);
 circle.set_radius(25);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Circle SkyRelative Property
 
 The **SkyRelative** property specifies whether the circle size is absolute or relative.
 
+#### Remarks
+
+The default is false. If this property is true, then the radius of the circle is in degrees of arc, and the circle will resize with zooming. If it is false, then the circle radius is in pixels, and the circle will not change size as the view is zoomed.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Circle.set_skyRelative([Bool])
 [Bool] Circle.get_skyRelative()
 ```
 
-#### Remarks
-
-The default is false. If this property is true, then the radius of the circle is in degrees of arc, and the circle will resize with zooming. If it is false, then the circle radius is in pixels, and the circle will not change size as the view is zoomed.
-
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
     // Draw a SkyRelative circle with a radius of 0.2 degrees of arc
     circle.set_skyRelative(true);
     circle.set_radius(0.2);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Circle SetCenter Method
 
 The **SetCenter** method specifies the center coordinates of the circle.
-
-#### Syntax
-
-```js
-Circle.setCenter(
-  ra  [Double],
-  dec  [Double]
-)
-```
 
 #### Parameters
 
@@ -361,8 +413,20 @@ This method does not return a value.
 
 The default value for right ascension and declination is zero.
 
+
+#### Syntax
+
+{% sample lang="js" -%}
+```js
+Circle.setCenter(
+  ra  [Double],
+  dec  [Double]
+)
+```
+
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
 // Draw a circle at the center of the constellation Sagittarius
 circle.setCenter(286.485, -27.5231666666667);
@@ -384,102 +448,129 @@ The Poly object inherits the properties of the [**Annotation**](#AnnotationObjec
 | Method | Description |
 | :-- |
 | [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |
+{% endmethod %}
+
+{% method -%}
 
 ### Poly Fill Property
 
 The **Fill** property specifies whether the polygon is filled or not.
 
-#### Syntax
-
-```js
-Poly.set_fill([Bool])
-[Bool] Poly.get_fill()
-```
-
 #### Remarks
 
 The default fill setting is false.
 
+#### Syntax
+
+{% sample lang="js" -%}
+```js
+Poly.set_fill([Bool])
+[Bool] Poly.get_fill()
+```
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
     // Fill a polygon with a slightly transparent blue
     poly.set_fill(true);
     poly.set_fillColor("0xBB0000AA");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Poly FillColor Property
 
 The **FillColor** property specifies the fill color as an ARGB value.
 
+#### Remarks
+
+The default fill color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Poly.set_fillColor([uint])
 [uint] Poly.get_fillColor()
 ```
 
-#### Remarks
-
-The default fill color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
-
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
     // Set a solid red fill color
     poly.set_fill(true);
     poly.set_fillColor("red");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Poly LineColor Property
 
 The **LineColor** property specifies the line color as an ARGB value.
 
+#### Remarks
+
+The default color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Poly.set_lineColor([uint])
 [uint] Poly.get_lineColor()
 ```
 
-#### Remarks
-
-The default color is white. The four bytes of the unsigned integer are the alpha, red, green and blue values respectively.
-
 #### Example Code
 
+{% sample lang="js" -%}
 ```js
 // Set a solid black line color
 poly.set_lineColor("0xFF000000");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Poly LineWidth Property
 
 The **LineWidth** property specifies the line width in pixels.
 
+#### Remarks
+
+The default line width is 1 pixel.
+
 #### Syntax
 
+{% sample lang="js" -%}
 ```js
 Poly.set_lineWidth([double])
 [double] Poly.get_lineWidth()
 ```
 
-#### Remarks
-
-The default line width is 1 pixel.
-
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Double the line width
 poly.set_lineWidth(2 * poly.get_lineWidth());
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Poly AddPoint Method
 
 The **AddPoint** method adds a point to a polygon.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 Poly.addPoint(
@@ -504,6 +595,8 @@ This method does not return a value.
 There is no theoretical limit to the number of points that can be added to a Poly object, however the number of points does affect performance -- so complex geometry should be simplified.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // The following function will add any number of points [ra, dec] to a polygon.
@@ -536,12 +629,18 @@ The PolyLine object inherits the properties of the [**Annotation**](#AnnotationO
 | Method | Description
 | :-- |
 | [**AddPoint**](#PolyLineAddPoint) | Adds a point to the polyline. |
+{% endmethod %}
+
+{% method -%}
 
 ### PolyLine LineColor Property
 
 The **LineColor** property specifies the line color as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 PolyLine.set_lineColor([uint])
@@ -554,16 +653,24 @@ The default color is white. The four bytes of the unsigned integer are the alpha
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // Set a solid blue color
 poly.set_fillColor("blue");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### PolyLine LineWidth Property
 
 The **LineWidth** property specifies the line width in pixels.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 PolyLine.set_lineWidth([double])
@@ -576,15 +683,23 @@ The default line width is 1 pixel.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 poly.set_lineWidth(3);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### PolyLine AddPoint Method
 
 The **AddPoint** method adds a point to a polyline.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 PolyLine.addPoint(
@@ -609,6 +724,8 @@ This method does not return a value.
 There is no theoretical limit to the number of points that can be added to a PolyLine object, however the number of points does affect performance -- so complex geometry should be simplified.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // The following function will add any number of points [ra, dec] to a polyline.
@@ -667,12 +784,18 @@ The Settings object is referenced from the [**Settings**](#ViewSettings) propert
 | [**SolarSystemScale**](#SettingsSolarSystemScale) | Specifies how to scale the size of the Sun and the planets. |
 | [**SolarSystemStars**](#SettingsSolarSystemStars) | Specifies whether to render stars when showing the solar system. |
 | [**UserID**](#SettingsUserID) | Specifies the user ID as a Guid. |
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ConstellationBoundryColor Property
 
 The **ConstellationBoundryColor** property specifies the constellation boundary color as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.setConstellationBoundryColor([uint])
@@ -685,16 +808,24 @@ The default boundary color is blue.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // set the constellation boundary color to green
 wwtControl.settings.setConstellationBoundryColor("green");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ConstellationFigureColor Property
 
 The **ConstellationFigureColor** property specifies the constellation figure color as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.setConstellationFigureColor([uint])
@@ -707,16 +838,24 @@ The default figure color is red.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // set the constellation figures color to blue
 wwtControl.settings.setConstellationFigureColor("blue");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ConstellationSelectionColor Property
 
 The **ConstellationSelectionColor** property specifies the constellation selection color as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.setConstellationSelectionColor([uint])
@@ -729,10 +868,15 @@ The default selection color is yellow.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // set the constellation selection color to red
 wwtControl.settings.setConstellationSelectionColor("red");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings EclipticColor Property
 
@@ -741,6 +885,9 @@ Note: This feature is not implemented.
 The **EclipticColor** property specifies the ecliptic color as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_eclipticColor([uint])
@@ -753,10 +900,15 @@ The default ecliptic color is green.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
   // set the ecliptic color to transparent green
   wwtControl.settings.set_eclipticColor("0xAA00FF00");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings GridColor Property
 
@@ -765,6 +917,9 @@ Note: This feature is not implemented.
 The **GridColor** property specifies the grid color as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_gridColor([uint])
@@ -777,16 +932,24 @@ The default equatorial grid color is gray.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // set the grid color to green
 wwtControl.settings.set_gridColor("green");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings LocalHorizonMode Property
 
 The **LocalHorizonMode** property specifies that the view should be from a local lat/long/alt position (for example, a city, or landmark).
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_localHorizonMode([Bool])
@@ -798,6 +961,8 @@ wwtControl.settings.set_localHorizonMode([Bool])
 This setting is equivalent to the **View > View from this location** checkbox, and must follow all calls to set the lat/long/alt position. To toggle the local horizon, use the [ShowHorizon Property](#SettingsShowHorizon).
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 wwtControl.settings.set_locationLat(37.455);
@@ -813,12 +978,18 @@ The view from New York of the Andromeda Constellation. Note the horizon and comp
 ![Andromeda no horizon](images/NYAndromedaNoHorizon.jpg)
 
 The view of Andromeda from the default viewing position, without any local horizon.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings LocationAltitude Property
 
 The **LocationAltitude** property specifies the view location altitude in meters.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_locationAltitude([double])
@@ -831,6 +1002,8 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // Set the view from London, UK
 wwtControl.settings.set_locationLat(51.31);
@@ -838,12 +1011,18 @@ wwtControl.settings.set_locationLng(-0.06);
 wwtControl.settings.set_locationAltitude(21);
 wwtControl.settings.set_localHorizonMode(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings LocationLat Property
 
 The **LocationLat** property specifies the view location latitude.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_locationLat([double])
@@ -856,6 +1035,8 @@ The default location latitude is 47.633.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // Set the view from Sydney, Australia
 wwtControl.settings.set_locationLat(-33.52);
@@ -865,12 +1046,18 @@ wwtControl.settings.set_localHorizonMode(true);
 ```
 
 ![](images/LocalSydney.jpg)
+{% endmethod %}
+
+{% method -%}
 
 ### Settings LocationLng Property
 
 The **LocationLng** property specifies the view location longitude.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_locationLng([double])
@@ -883,6 +1070,8 @@ The default location longitude is 122.133333.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // Set the view from San Francisco, USA
 wwtControl.settings.set_locationLat(37.455);
@@ -890,6 +1079,9 @@ wwtControl.settings.set_locationLng(-122.262);
 wwtControl.settings.set_locationAltitude(72);
 wwtControl.settings.set_localHorizonMode(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowClouds Property
 
@@ -898,6 +1090,9 @@ Note: This feature is not implemented.
 The **ShowClouds** property specifies whether to show the Earth's cloud layer.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showClouds([Bool])
@@ -910,6 +1105,8 @@ This setting is equivalent to the **Settings > Show Earth Cloud Layer** checkbox
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showClouds(true);
 ```
@@ -921,12 +1118,18 @@ The Earth without its cloud layer.
 ![Clouds](images/EarthClouds.jpg)
 
 The Earth with its cloud layer.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowConstellationBoundries Property
 
 The **ShowConstellationBoundries** property specifies whether to show constellation boundaries.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showConstellationBoundries([Bool])
@@ -939,6 +1142,8 @@ This setting is equivalent to the **View > Boundaries** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showConstellationBoundries(true);
 ```
@@ -946,12 +1151,18 @@ wwtControl.settings.set_showConstellationBoundries(true);
 ![Boundaries](images/Boundarys.jpg)
 
 The constellation boundaries are shown in blue, except for the selected constellation, with its boundary in yellow.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowConstellationFigures Property
 
 The **ShowConstellationFigures** property specifies whether to show constellation figures.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showConstellationFigures([Bool])
@@ -964,6 +1175,8 @@ This setting is equivalent to the **View > Figures** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showConstellationFigures(true);
 ```
@@ -971,12 +1184,18 @@ wwtControl.settings.set_showConstellationFigures(true);
 ![Figures](images/Figures.jpg)
 
 The constellation figures.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowConstellationSelection Property
 
 The **ShowConstellationSelection** property specifies whether to show only the selected constellation.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showConstellationSelection([Bool])
@@ -989,6 +1208,8 @@ This setting is equivalent to the **View > Focused Only** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showConstellationSelection(true);
 ```
@@ -996,12 +1217,18 @@ wwtControl.settings.set_showConstellationSelection(true);
 ![Selection](images/Selection.jpg)
 
 The selected constellation.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowCrosshairs Property
 
 The **ShowCrosshairs** property specifies whether to show cross-hairs.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showCrosshairs([Bool])
@@ -1014,6 +1241,8 @@ This setting is equivalent to the **View > Reticle/Crosshairs** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showCrosshairs(true);
 ```
@@ -1021,12 +1250,18 @@ wwtControl.settings.set_showCrosshairs(true);
 ![Crosshairs](images/CrossHairs.jpg)
 
 The crosshairs, or reticle, shown with Mars in view.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowEcliptic Property
 
 The **ShowEcliptic** property specifies whether to show the ecliptic grid.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showEcliptic([Bool])
@@ -1039,11 +1274,16 @@ This setting is equivalent to the **Grids > Ecliptic Grid** checkbox in the laye
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showEcliptic(true);
 ```
 
 ![Ecliptic](images/Ecliptic.jpg)
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowElevationModel Property
 
@@ -1052,6 +1292,9 @@ Note: This feature is not implemented.
 The **ShowElevationModel** property specifies whether to show the elevation model.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showElevation([Bool])
@@ -1064,6 +1307,8 @@ This setting is equivalent to the **Settings > Show Elevation Model** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showElevationModel(true);
 ```
@@ -1075,6 +1320,9 @@ The Himalayan mountains, shown without elevation data.
 ![Himalayas model](images/ElevationModel.jpg)
 
 The Himalayan mountains, with elevation data.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowFieldOfView Property
 
@@ -1083,6 +1331,9 @@ Note: This feature is not implemented.
 The **ShowFieldOfView** property specifies whether to show the field of view box.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showFieldOfView([Bool])
@@ -1095,18 +1346,26 @@ This setting is equivalent to the **View > Field of View** Indicator checkbox. T
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showFieldOfView(true);
 ```
 
 ![FOV](images/FOV.jpg)
 Gamma Pegasi shown with the Field of View Indicator box.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowGrid Property
 
 The **ShowGrid** property specifies whether to show the equatorial grid.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtcontrol.settings.set_showGrid([Bool])
@@ -1119,12 +1378,17 @@ This setting is equivalent to the **View > Equatorial Grid** check box.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showGrid(true);
 ```
 
 ![Equatorial Grid](images/EGrid.jpg)
 The Equatorial grid shown, looking North, with the Hydrogen Alpha Full Sky Map as the data source. |
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowHorizon Property
 
@@ -1133,6 +1397,9 @@ Note: This feature is not implemented.
 The **ShowHorizon** property specifies whether to show the horizon.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showHorizon([Bool])
@@ -1145,9 +1412,14 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showHorizon(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowHorizonPanorama Property
 
@@ -1156,6 +1428,9 @@ Note: This feature is not implemented.
 The **ShowHorizonPanorama** property specifies whether to show the horizon in panoramas.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showHorizonPanorama([Bool])
@@ -1168,9 +1443,14 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showHorizonPanorama(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowMoonsAsPointSource Property
 
@@ -1179,6 +1459,9 @@ Note: This feature is not implemented.
 The **ShowMoonsAsPointSource** property specifies whether to show the moon as a point source.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showMoonsAsPointSource([Bool])
@@ -1191,9 +1474,14 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showMoonsAsPointSource(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowSolarSystem Property
 
@@ -1202,6 +1490,9 @@ Note: This feature is not implemented.
 The **ShowSolarSystem** property specifies whether to show the 3-D solar system view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showSolarSystem([Bool])
@@ -1214,9 +1505,14 @@ This setting can also be changed from within Tours, enabling a tour to switch fr
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showSolarSystem(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings ShowUTCTime Property
 
@@ -1225,6 +1521,9 @@ Note: This feature is not implemented.
 The **ShowUTCTime** property specifies whether to show the time as a UTC value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_showUTCTime([Bool])
@@ -1237,9 +1536,14 @@ If this value is true, the time shown will be Universal Coordinated Time (or Gre
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_showUTCTime(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemCosmos Property
 
@@ -1248,6 +1552,9 @@ Note: This feature is not implemented.
 The **SolarSystemCosmos** property specifies whether to show the solar system cosmos.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemCosmos([Bool])
@@ -1260,9 +1567,14 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemCosmos(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemLighting Property
 
@@ -1271,6 +1583,9 @@ Note: This feature is not implemented.
 The **SolarSystemLighting** property specifies whether to show the lighting effect of the Sun on the solar system.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemLighting([Bool])
@@ -1283,6 +1598,8 @@ This setting is equivalent to the **View > Lighting** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemLighting(true);
 ```
@@ -1290,6 +1607,9 @@ wwtControl.settings.set_solarSystemLighting(true);
 ![Saturn lighting](images/SaturnLighting.jpg)
 
 The lighting of the Sun on Saturn.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemMilkyWay Property
 
@@ -1298,6 +1618,9 @@ Note: This feature is not implemented.
 The **SolarSystemMilkyWay** property specifies whether to show the Milky Way when showing the solar system.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemMilkyWay([Bool])
@@ -1310,6 +1633,8 @@ This setting is equivalent to the **View > Milky Way** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemMilkyWay(true);
 ```
@@ -1317,6 +1642,9 @@ wwtControl.settings.set_solarSystemMilkyWay(true);
 ![Saturn Milky Way](images/SaturnMilkyWay.jpg)
 
 The Milky Way appears to the left of Saturn.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemMultiRes Property
 
@@ -1325,6 +1653,9 @@ Note: This feature is not implemented.
 The **SolarSystemMultiRes** property specifies whether to show the multi-resolution textures for the planets.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemMultiRes([Bool])
@@ -1339,6 +1670,8 @@ This setting is equivalent to the **Settings > Multi-Res Solar System Bodies** c
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemMultiRes(true);
 ```
@@ -1349,6 +1682,9 @@ The Caribbean in standard textures.
 ![Carribean hires](images/CarribeanHiRes.jpg)
 
 The Caribbean with multi-resolution textures.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemOrbitColor Property
 
@@ -1357,6 +1693,9 @@ Note: This feature is not implemented.
 The **SolarSystemOrbitColor** property specifies the solar system orbit colors as an ARGB value.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemOrbitColor([uint])
@@ -1369,10 +1708,15 @@ The default orbit color is dark gray.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // set the solar system orbit color to red
 wwtControl.settings.set_solarSystemOrbitColor("red");
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemOrbits Property
 
@@ -1381,6 +1725,9 @@ Note: This feature is not implemented.
 The **SolarSystemOrbits** property specifies whether to show the orbits when showing the solar system.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemOrbits([Bool])
@@ -1393,6 +1740,8 @@ This setting is equivalent to the **View > Orbits** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemOrbits(true);
 ```
@@ -1400,6 +1749,9 @@ wwtControl.settings.set_solarSystemOrbits(true);
 ![Saturn Orbits](images/SaturnOrbits.jpg)
 
 The orbits of all the solar system planets are shown in the SolarSystemOrbitColor.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemOverlays Property
 
@@ -1408,6 +1760,9 @@ Note: This feature is not implemented.
 The **SolarSystemOverlays** property specifies whether to show the solar system overlays.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemOverlays([Bool])
@@ -1420,9 +1775,14 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemOverlays(true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemScale Property
 
@@ -1431,6 +1791,9 @@ Note: This feature is not implemented.
 The **SolarSystemScale** property specifies how to scale the size of the Sun and the planets.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemScale([int])
@@ -1443,6 +1806,8 @@ If this value is set to 1, then the Sun and planets will appear actual size in t
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemScale(50);
 ```
@@ -1453,6 +1818,9 @@ The Sun shown actual size.
 ![Sun full](images/SunFull.jpg)
 
 The Sun with maximum scaling.
+{% endmethod %}
+
+{% method -%}
 
 ### Settings SolarSystemStars Property
 
@@ -1461,6 +1829,9 @@ Note: This feature is not implemented.
 The **SolarSystemStars** property specifies whether to render stars when showing the solar system.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_solarSystemStars([Bool])
@@ -1473,6 +1844,8 @@ This setting is equivalent to the **View > Show Stars** checkbox.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.settings.set_solarSystemStars(true);
 ```
@@ -1480,6 +1853,9 @@ wwtControl.settings.set_solarSystemStars(true);
 ![Saturn Stars](images/SaturnStars.jpg) |
 
 | Saturn and the stars. |
+{% endmethod %}
+
+{% method -%}
 
 ### Settings UserID Property
 
@@ -1488,6 +1864,9 @@ Note: This feature is not implemented.
 The **UserID** property is used to retrieve the user ID as a Guid.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings.set_userID([Guid])
@@ -1499,6 +1878,8 @@ wwtControl.settings.set_userID([Guid])
 The Guid is in registry format, without the accompanying "{}" braces. When a user runs the client, a unique Guid is generated for them. The Guid is not persistent and will be different each time the same user runs the client. It can be used to identify a particular user during one session.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Assume an input tag has been set up in the html code
@@ -1546,6 +1927,9 @@ The WWTControl object does not inherit any classes that have exposed properties 
 | [**wwtArrived**](#wwtArrived) | Fired when a change to the view from a drag, zoom, or goto comes to a halt. |
 | [**wwtClick**](#wwtClick) | Fired when the left mouse button is clicked. |
 | [**wwtReady**](#wwtReady) | Fired when the web client is initialized. |
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl Fov Property
 
@@ -1554,6 +1938,9 @@ Note: This feature is not implemented.
 The **Fov** property contains the field of view in degrees.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 [double] wwtControl.get_fov()
@@ -1564,6 +1951,8 @@ The **Fov** property contains the field of view in degrees.
 This property is read-only. The maximum field of view is 60 degrees, the minimum is close to zero, at 0.00022910934437488727 degrees. Field of view can be considered to be the inverse of the zoom factor -- the smaller the field of view the greater the zoom factor.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Function to increase the field of view (zoom out)
@@ -1586,12 +1975,18 @@ function FovDec() {
 #### Samples
 
 *   [WWT Web Client Fov](#WWTWebClientFov)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl Settings Property
 
 The **Settings** property references the [**Settings**](#SettingsObject) object for the WWTControl.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.settings [Settings]
@@ -1603,6 +1998,8 @@ This property is read-only, though individual settings can have their values set
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // show cross hairs and display a semi-transparent grid
 wwtControl.settings.set_showCrosshairs(true);
@@ -1613,6 +2010,9 @@ wwtControl.settings.set_showGrid(true);
 #### Samples
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl SmoothAnimation Property
 
@@ -1621,6 +2021,9 @@ Note: This feature is not implemented.
 The **SmoothAnimation** property specifies whether to pan smoothly or quickly to the new location.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.set_smoothAnimation([Bool])
@@ -1633,6 +2036,8 @@ If this property is set to true the panning will be smoother but slower than if 
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.set_smoothAnimation(true);
 ```
@@ -1640,12 +2045,18 @@ wwtControl.set_smoothAnimation(true);
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl AddAnnotation Method
 
 The **AddAnnotation** method adds an [**Annotation**](#AnnotationObject) object to the view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.addAnnotation(
@@ -1669,6 +2080,8 @@ An Annotation Object is inherited by the [**Circle**](#circle-object) object, th
 Typically one or more annotations are added to a view when a user clicks on a custom UI element such as a checkbox, and then those annotations are removed when the user deselects that UI element.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Global settings
@@ -1701,12 +2114,18 @@ function toggleSetting(text) {
 #### Samples
 
 *   [WWT Web Client Poly](#WWTWebClientPoly)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl ClearAnnotations Method
 
 The **ClearAnnotations** method removes all annotations from the view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.clearAnnotations()
@@ -1726,6 +2145,8 @@ None.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.clearAnnotations();
 ```
@@ -1733,12 +2154,18 @@ wwtControl.clearAnnotations();
 #### Samples
 
 *   [WWT Web Client Click Event](#WWTWebClientClickEvent)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl CreateCircle Method
 
 The **CreateCircle** method creates a [**Circle**](#circle-object) object, and returns a reference to the created object.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.createCircle(
@@ -1760,6 +2187,8 @@ This method returns a reference to a [**Circle**](#circle-object) object.
 In addition to creating the circle an [**Annotation**](#AnnotationObject) object (which is inherited by the Circle object) will be created to provide supporting text.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Assume that a WWTControl object has been created, and named wwtControl
@@ -1787,12 +2216,18 @@ In this image,  circle objects filled with a transparent color have been used t
 
 *   [WWT Web Client Arrived](#WWTWebClientArrived)
 *   [WWT Web Client Poly](#WWTWebClientPoly)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl CreatePolygon Method
 
 The **CreatePolygon** method creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.CreatePolygon(
@@ -1814,6 +2249,8 @@ This method returns a reference to the created [**Poly**](#poly-object) object.
 In addition to creating the polygon an [**Annotation**](#AnnotationObject) object (which is inherited by the poly object) will be created to provide supporting text.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Assume that a WWTControl object has been created, and named wwtControl
@@ -1844,12 +2281,18 @@ This image shows the use of Polygon objects to identify a hierarchy of areas. If
 #### Samples
 
 *   [WWT Web Client Poly](#WWTWebClientPoly)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl CreatePolyLine Method
 
 The **CreatePolyLine** method creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.createPolyLine(
@@ -1873,6 +2316,8 @@ In addition to creating the polyline, an [**Annotation**](#AnnotationObject) obj
 The rendering of a polyline will simply take each point in the list and draw a line to the next. In order to have a more complex polyline, for example with forks with two or more lines coming from a single point, then there are two main options, either create several polyline objects sharing a single point, or backtrack over points after reaching the end of one fork, and then continuing to add points along the second fork, and so on.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Assume that a WWTControl object has been created, named wwtControl
@@ -1905,12 +2350,18 @@ This image shows some common variations of Polyline objects.
 #### Samples
 
 *   [WWT Web Client Poly](#WWTWebClientPoly)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl GetDec Method
 
 The **GetDec** method retrieves the declination for the view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.getDec()
@@ -1930,6 +2381,8 @@ The declination of an object is how many degrees it is north or south of the cel
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // Save off the current view...
 var savedRA = wwtControl.getRA();
@@ -1944,12 +2397,18 @@ wwtControl.gotoRaDecZoom(savedRA, savedDec, savedFov, false);
 #### Samples
 
 *   [WWT Web Client Fov](#WWTWebClientFov)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl GetRA Method
 
 The **GetRA** method retrieves the right ascension for the view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.getRA()
@@ -1969,6 +2428,8 @@ Refer to the remarks for [**GetDec**](#ViewGetDec).
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // Assume that a WWTControl object has been created, named wwtControl
 // Function to zoom in....
@@ -1983,12 +2444,18 @@ function FovDec() {
 #### Samples
 
 *   [WWT Web Client Fov](#WWTWebClientFov)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl GotoRaDecZoom Method
 
 The **GotoRaDecZoom** method is used to go to a new viewing position.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.gotoRaDecZoom(
@@ -2020,6 +2487,8 @@ This method is one of the most used of the API set, controlling the changing of 
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // The following code shows how to convert from hours, minutes and seconds
 // to a right ascension and degrees, minutes and seconds to a declination.
@@ -2044,6 +2513,9 @@ wwtControl.gotoRaDecZoom(HMS(06, 25, 30), DMS(45, 00, 00), 30, false);
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
 *   [WWT Web Client Fov](#WWTWebClientFov)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl HideUI Method
 
@@ -2052,6 +2524,9 @@ Note: This feature is not implemented.
 The **HideUI** method specifies whether to hide the UI for the view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.hideUI(
@@ -2074,6 +2549,8 @@ If the UI is hidden, the main menu, thumbnails, collections, tours and so on wil
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 var bShowUI = true;
 
@@ -2094,6 +2571,9 @@ function toggleSetting(text) {
 #### Samples
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl LoadImageCollection Method
 
@@ -2101,6 +2581,9 @@ The **LoadImageCollection** method is used to load a WTML
  collection file, containing links to foreground and background images.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.loadImageCollection(
@@ -2126,6 +2609,8 @@ After the collection is loaded, the images can be referenced by their string nam
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 // If the data file is in the same folder as the JScript Web Control.
 wwtControl.loadImageCollection("imageFile.wtml");
@@ -2136,12 +2621,18 @@ wwtControl.loadImageCollection("[path]//imageFile.wtml");
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl LoadTour Method
 
 The **LoadTour** method is used to load and start a tour.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.loadTour(
@@ -2168,6 +2659,8 @@ Tours can be stand-alone, or part of collections. For more information on tours 
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.loadTour("http://www.worldwidetelescope.org/docs/wtml/tourone.wtt");
 ```
@@ -2175,6 +2668,9 @@ wwtControl.loadTour("http://www.worldwidetelescope.org/docs/wtml/tourone.wtt");
 #### Samples
 
 *   [WWT Web Client Tours](#WWTWebClientTours)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl LoadVOTable Method
 
@@ -2183,6 +2679,9 @@ Note: This feature is not implemented.
 The **LoadVOTable** method is used to load a VO (Virtual Observatory) table.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.loadVOTable(
@@ -2208,15 +2707,23 @@ The VO data will appear as a spreadsheet in its own window. For details on the V
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.loadVOTable("path.xml", true);
 ```
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl PlayTour Method
 
 The **PlayTour** method is used to restart a tour from the beginning.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.playTour()
@@ -2236,6 +2743,8 @@ Refer to the remarks for the [**LoadTour**](#ViewLoadTour) method.
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 function restartTour(){
     wwtControl.playTour();
@@ -2245,12 +2754,18 @@ function restartTour(){
 #### Samples
 
 *   [WWT Web Client Tours](#WWTWebClientTours)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl RemoveAnnotation Method
 
 The **RemoveAnnotation** method removes the specified annotation from the view.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.removeAnnotation(
@@ -2272,6 +2787,8 @@ This method does not return a value.
 None.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Global settings
@@ -2304,12 +2821,18 @@ function toggleSetting(text) {
 #### Samples
 
 *   [WWT Web Client Poly](#WWTWebClientPoly)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl SetBackgroundImageByName Method
 
 The **SetBackgroundImageByName** method loads an image to use as the view background.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.setBackgroundImageByName(
@@ -2337,6 +2860,8 @@ A background image need not cover the whole sky, and can in fact be a simple stu
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.loadImageCollection("MyImageCollection.wtml");
 wwtControl.setBackgroundImageByName("The Big Picture");
@@ -2346,12 +2871,18 @@ wwtControl.gotoRaDecZoom(45.5, 122.0, 2, false);
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl SetForegroundImageByName Method
 
 The **SetForegroundImageByName** method loads an image to use as the view foreground.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.setForegroundImageByName(
@@ -2418,6 +2949,8 @@ The Sun and solar system planets and moons are not considered either foreground 
 Note that the _images_ used for both foreground and background are tiled image pyramids. Refer to the tools documentation [WorldWide Telescope Data Tools Guide](WorldWideTelescopeDataToolsGuide.html) for details on how to create these image pyramids, and to the [WorldWide Telescope Data Files Reference](WorldWideTelescopeDataFilesReference.html) for details on the data file formats.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 wwtControl.loadImageCollection("Serpens.wtml");
@@ -2490,6 +3023,9 @@ The "Serpens.wtml" file contains the following:
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl SetForegroundOpacity Method
 
@@ -2500,6 +3036,9 @@ The **SetForegroundOpacity** method specifies the opacity of the foreground imag
 This method is not currently implemented.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.setForegroundOpacity(
@@ -2522,6 +3061,8 @@ This setting enables some see-through in the foreground image, to enable a compa
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 wwtControl.setForegroundOpacity(0.8);
 ```
@@ -2529,12 +3070,18 @@ wwtControl.setForegroundOpacity(0.8);
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl StopTour Method
 
 The **StopTour** method is used to stop and exit a tour.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 wwtControl.stopTour()
@@ -2554,6 +3101,8 @@ After a tour has been stopped with this call, it cannot be restarted from the po
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 function loadTour(tourURL) {
     wwtControl.loadTour(tourURL);
@@ -2567,12 +3116,18 @@ function stopTour() {
 #### Samples
 
 *   [WWT Web Client Tours](#WWTWebClientTours)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl AnnotationClicked Event
 
 The **AnnotationClicked** event is fired when an Annotation object is clicked.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 function annotationClicked(obj, eventArgs){}
@@ -2584,6 +3139,8 @@ The obj parameter is the wwt object that originated the click event and the even
 
 #### Example Code
 
+{% sample lang="js" -%}
+
 ```js
 function annotationClicked(obj, eventArgs) {
     alert("Annotation ID:" + eventArgs.get_id().toString());
@@ -2593,12 +3150,18 @@ function annotationClicked(obj, eventArgs) {
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl Arrived Event
 
 The **wwtArrived** event is fired when a change to the view from a drag, zoom, or gotoRaDecZoom comes to a halt.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 function arrived(){}
@@ -2611,6 +3174,8 @@ When the view is to change following a drag, zoom, or gotoRaDecZoom, normally th
 Currently this event is not being sent if the _instant_ parameter of the **gotoRaDecZoom** method is set to True.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Register the event to your arrived function
@@ -2635,12 +3200,18 @@ function myArrivedEvent(obj, eventArgs) {
 #### Samples
 
 *   [WWT Web Client Arrived](#WWTWebClientArrived)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl Click Event
 
 The **wwtClick** event is fired when the left mouse button is clicked.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 function click(obj, eventArgs){}
@@ -2651,6 +3222,8 @@ function click(obj, eventArgs){}
 This event is not fired for all mouse clicks, only those when the view is stationary and the mouse click is not part of a zoom or drag procedure. In other words, it is evident that the user is clicking on an object. The RA and Dec provided in the eventArgs object are the location of the click, which will not usually be the same as the RA and Dec for the current view. The obj parameter is the wwt object that originated the click event and the eventArgs object contains the click event arguments accessed by the methods get_ra() and get_dec().
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 // Register the event to your clicked function
@@ -2664,12 +3237,18 @@ function clicked(obj, eventArgs) {
 #### Samples
 
 *   [WWT Web Client Click Event](#WWTWebClientClickEvent)
+{% endmethod %}
+
+{% method -%}
 
 ### WWTControl Ready Event
 
 The **wwtClick** event is fired when the web client is initialized.
 
 #### Syntax
+
+{% sample lang="js" -%}
+
 
 ```js
 function ready(){}
@@ -2680,6 +3259,8 @@ function ready(){}
 This event is fired only once, and should be responded to by all clients. Use it to initialize internal variables appropriately, in particular the reference to the View object, shown in the example code.
 
 #### Example Code
+
+{% sample lang="js" -%}
 
 ```js
 var wwt;
