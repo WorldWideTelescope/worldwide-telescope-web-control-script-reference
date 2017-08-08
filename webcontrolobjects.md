@@ -1833,11 +1833,12 @@ function FovDec() {
     }
 }
 ```
+{% endmethod %}
 
 #### Samples
 
 *   [WWT Web Client Fov](#WWTWebClientFov)
-{% endmethod %}
+
 
 {% method -%}
 ### WWTControl Settings Property
@@ -1869,7 +1870,7 @@ wwtControl.settings.set_showGrid(true);
 #### Samples
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
-{% endmethod %}
+
 
 {% method -%}
 ### WWTControl SmoothAnimation Property
@@ -1901,7 +1902,7 @@ wwtControl.set_smoothAnimation(true);
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
-{% endmethod %}
+
 
 {% method -%}
 ### WWTControl AddAnnotation Method
@@ -1966,7 +1967,7 @@ function toggleSetting(text) {
 #### Samples
 
 *   [WWT Web Client Poly](#WWTWebClientPoly)
-{% endmethod %}
+
 
 {% method -%}
 ### WWTControl ClearAnnotations Method
@@ -2004,7 +2005,7 @@ wwtControl.clearAnnotations();
 #### Samples
 
 *   [WWT Web Client Click Event](#WWTWebClientClickEvent)
-{% endmethod %}
+
 
 {% method -%}
 ### WWTControl CreateCircle Method
@@ -2859,11 +2860,11 @@ This setting enables some see-through in the foreground image, to enable a compa
 ```js
 wwtControl.setForegroundOpacity(0.8);
 ```
-
+{% endmethod %}
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
-{% endmethod %}
+
 
 {% method -%}
 ### WWTControl StopTour Method
@@ -3052,6 +3053,7 @@ function wwtReady() {
 }
 ```
 {% endmethod %}
+
 #### Samples
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
