@@ -4,7 +4,7 @@ The following table lists the samples that can be used as a starting point for W
 
 Click on the **Sample Name** to view the source. Note that paths may need to be changed for the samples to work, these paths are highlighted by comments in the sample code.
 
-###### Sky samples
+### Sky samples
 | Sample Name | Description |  Link |
 | :-- |
 | [**WWT Web Client Simple**](../docs/Samples/displaycode.htm?codeExample=wwtwebclientsimpleUIHtml5.html) | Performs the basic steps of opening up a client, and provides a few UI controls to select one of two constellations, and change a few settings. | **[Run]**(../docs/Samples/wwtwebclientsimpleUIHtml5.html)** |
@@ -16,13 +16,13 @@ Click on the **Sample Name** to view the source. Note that paths may need to be 
 | [**WWT Web Client Images**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientImagesHtml5.html) | Loads a sample image collection, enabling the selection of one of three foreground images. | **[Run]**(../docs/Samples/wwtwebclientimagesHtml5.html) |
 | [**WWT Web Client Tours**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientToursHtml5.html) | Loads and runs one of two simple tours of the Solar System. | **[Run]**(../docs/Samples/wwtwebclienttoursHtml5.html) |
 
-###### Earth samples
+### Earth samples
 
 | Sample Name | Description |  Link |
 | :-- |
 | [**WWT Web Client Earth City Search**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientEarthCitySearchHtml5.html) | Change the view to the Earth, then locate cities and lat/long locations. | **[Run]**(../docs/Samples/wwtwebclientearthcitysearchHtml5.html) |
 
-###### Planet samples
+### Planet samples
 | Sample Name | Description |  Link |
 | :-- |
 | [**WWT Web Client Mars Explorer**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientMarsExplorerHtml5.html) | Change the view to Planets and the Imagery to Mars, then scroll through a range of surface features from the _Valles Marineris_ canyon to the _Happy Face_ crater. | **[Run]**(../docs/Samples/WWTWebClientMarsExplorerHtml5.html) |

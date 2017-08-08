@@ -1,4 +1,4 @@
-(#wwtcontrol-## Web Control Objects
+# Web Control Objects
 
 The [*WWTControl**](#wwtcontrol-object) object is the principal object, the other objects are created on initialization of the object, or can be created by the methods provided by this object.
 
@@ -11,7 +11,7 @@ Note that the **Example Code** listed for each property or method is _not_ code 
 | [**Poly**](#poly-object) | Used to render a polygon on the screen. |
 | [**PolyLine**](#polyline-object) | Used to render a polyline on the screen. |
 | [**Settings**](#settings-object) | Used to specify a range of settings for a View object. |
-| [**WWTControl**](#wwt-control-object) | Used to manage the canvas view of WorldWide Telescope images. |
+| [**WWTControl**](#wwtcontrol-object) | Used to manage the canvas view of WorldWide Telescope images. |
 
 ## Annotation Object
 
@@ -22,7 +22,7 @@ The Annotation Object is inherited by the [**Circle**](#circle-object) object, t
 | [**ID**](#annotation-id-property) | Contains a string for use by the web client. |
 | [**Label**](#annotation-label-property) | Contains descriptive text for the annotation. |
 | [**Opacity**](#annotation-opacity-property) | Specifies the opacity to be applied to the complete annotation. |
-| [**ShowHoverLabel**](#annotation-show-hover-label-property) | Specifies whether to render the label if the mouse is hovering over the annotation. |
+| [**ShowHoverLabel**](#annotation-showhoverlabel-property) | Specifies whether to render the label if the mouse is hovering over the annotation. |
 | [**Center**](#annotation-center-property) | Specifies the center of the annotation. |
 | [**Tag**](#annotation-tag-property) | Contains a string for use by the web client. |
 
@@ -33,7 +33,7 @@ The **ID** property contains a string for use by the web client.
 
 #### Remarks
 
-This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#wwtcontrol-annotation-clicked-event) event.
+This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#wwtcontrol-annotationclicked-event) event.
 
 {% sample lang="js" -%}
 #### Syntax
@@ -1749,7 +1749,7 @@ The WWTControl object does not inherit any classes that have exposed properties 
 | [**CreatePolyLine**](#wwtcontrol-createpolyline-method) | Creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object. |
 | [**GetDec**](#wwtcontrol-getdec-method) | Retrieves the declination for the view. |
 | [**GetRA**](#wwtcontrol-getra-method) | Retrieves the right ascension for the view. |
-| [**GotoRaDecZoom**](#wwtcontrol-goto-method) | Used to go to a new viewing position. |
+| [**GotoRaDecZoom**](#wwtcontrol-gotoradeczoom-method) | Used to go to a new viewing position. |
 | [**HideUI**](#wwtcontrol-hideui-method) | Specifies whether to hide the UI for the view. |
 | [**LoadImageCollection**](#wwtcontrol-loadimagecollection-method) | Used to load a WTML collection file, containing links to foreground and background images. |
 | [**LoadTour**](#wwtcontrol-loadtour-method) | Used to load and start a tour. |
@@ -2227,7 +2227,7 @@ This method returns a double containing the right ascension in decimal degrees.
 
 #### Remarks
 
-Refer to the remarks for [**GetDec**](#wwtcontrol-getdec-property).
+Refer to the remarks for [**GetDec**](#wwtcontrol-getdec-method).
 
 {% sample lang="js" -%}
 #### Syntax
