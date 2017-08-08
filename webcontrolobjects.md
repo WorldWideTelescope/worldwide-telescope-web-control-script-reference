@@ -26,12 +26,13 @@ The Annotation Object is inherited by the [**Circle**](#circle-object) object, t
 | [**Center**](#annotation-center) | Specifies the center of the annotation. |
 | [**Tag**](#annotation-tag) | Contains a string for use by the web client. |
 
+{% method -%}
 ### Annotation id property
 
 The **ID** property contains a string for use by the web client.
 
 #### Syntax
-
+{% sample lang=js -%}
 ```js
 Annotation.set_id([string])
 [string] Annotation.get_id()
@@ -43,17 +44,20 @@ This string can be used to hold information (perhaps a URL or link to related in
 
 #### Example Code
 
+{% sample lang=js -%}
 ```js
 // Draw a circle at the center of the constellation Sagittarius
 circle.setCenter(286.485, -27.5231666666667);
 circle.set_id("Center of the Constellation Sagittarius");
 ```
+{% endmethod %}
 
 ### Annotation label property
 
 The **Label** property contains descriptive text for the annotation.
 
 #### Syntax
+
 
 ```js
 Annotation.set_label([string])
@@ -65,6 +69,7 @@ Annotation.set_label([string])
 The label text will be rendered if the [**ShowHoverLabel**](#annotation-showhoverlabel-property) property is set to true.
 
 #### Example Code
+
 
 ```js
 // Draw a circle at the center of the constellation Sagittarius
