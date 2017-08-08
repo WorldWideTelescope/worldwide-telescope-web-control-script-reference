@@ -1,6 +1,6 @@
 ## Web Control Objects
 
-The [**WWTControl**](#wwt-control) object is the principal object, the other objects are created on initialization of the object, or can be created by the methods provided by this object.
+The [*WWTControl**](#wwt-control-object) object is the principal object, the other objects are created on initialization of the object, or can be created by the methods provided by this object.
 
 Note that the **Example Code** listed for each property or method is _not_ code that will run on its own, just an example of how to use the property or method within a script. Run-able samples are listed and linked to in the [Web Control Samples](#web-control-samples) section.
 
@@ -11,7 +11,7 @@ Note that the **Example Code** listed for each property or method is _not_ code 
 | [**Poly**](#poly-object) | Used to render a polygon on the screen. |
 | [**PolyLine**](#polyline-object) | Used to render a polyline on the screen. |
 | [**Settings**](#settings-object) | Used to specify a range of settings for a View object. |
-| [**WWTControl**](#wwt-control) | Used to manage the canvas view of WorldWide Telescope images. |
+| [**WWTControl**](#wwt-control-object) | Used to manage the canvas view of WorldWide Telescope images. |
 
 ## Annotation Object
 
@@ -19,12 +19,12 @@ The Annotation Object is inherited by the [**Circle**](#circle-object) object, t
 
 | Property | Description |
 | :-- | :-- |
-| [**ID**](#annotation-id) | Contains a string for use by the web client. |
-| [**Label**](#annotation-label) | Contains descriptive text for the annotation. |
-| [**Opacity**](#annotation-opacity) | Specifies the opacity to be applied to the complete annotation. |
-| [**ShowHoverLabel**](#annotation-show-hover-label) | Specifies whether to render the label if the mouse is hovering over the annotation. |
-| [**Center**](#annotation-center) | Specifies the center of the annotation. |
-| [**Tag**](#annotation-tag) | Contains a string for use by the web client. |
+| [**ID**](#annotation-id-property) | Contains a string for use by the web client. |
+| [**Label**](#annotation-label-property) | Contains descriptive text for the annotation. |
+| [**Opacity**](#annotation-opacity-property) | Specifies the opacity to be applied to the complete annotation. |
+| [**ShowHoverLabel**](#annotation-show-hover-label-property) | Specifies whether to render the label if the mouse is hovering over the annotation. |
+| [**Center**](#annotation-center-property) | Specifies the center of the annotation. |
+| [**Tag**](#annotation-tag-property) | Contains a string for use by the web client. |
 
 {% method -%}
 ### Annotation id property
@@ -33,7 +33,7 @@ The **ID** property contains a string for use by the web client.
 
 #### Remarks
 
-This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#annotation-clicked) event.
+This string can be used to hold information (perhaps a URL or link to related information, reference string or number, credits, date, times, and so on) that is of use to the web client. The ID string is returned with a [**AnnotationClicked**](#wwtcontrol-annotation-clicked-event) event.
 
 {% sample lang="js" -%}
 #### Syntax
@@ -188,9 +188,9 @@ circle.set_tag("001");
 
 ## Circle Object
 
-The Circle object is used to render a circle on the screen. It is created by the [**CreateCircle**](#ViewCreateCircle) method.
+The Circle object is used to render a circle on the screen. It is created by the [**CreateCircle**](#wwtcontrol-create-circle-method) method.
 
-The Circle object inherits the properties of the [**Annotation**](#AnnotationObject) object.
+The Circle object inherits the properties of the [**Annotation**](#annotation-object) object.
 
 ![Polys](images/Polys.png)
 
@@ -198,16 +198,16 @@ The image shows a purple circle with a 2 pixel line, a green polygon and a light
 
 | Property | Description |
 | :-- |
-| [**Fill**](#CircleFill) | Specifies whether the circle should be filled or not. |
-| [**FillColor**](#CircleFillColor) | Specifies the fill color as an ARGB value. |
-| [**LineColor**](#CircleLineColor) | Specifies the line color as an ARGB value. |
-| [**LineWidth**](#CircleLineWidth) | Specifies the line width in pixels. |
-| [**Radius**](#CircleRadius) | Specifies the circle radius. |
-| [**SkyRelative**](#CircleSkyRelative) | Specifies whether the circle size is absolute or relative. |
+| [**Fill**](#circle-fill-property) | Specifies whether the circle should be filled or not. |
+| [**FillColor**](#circle-fillcolor-property) | Specifies the fill color as an ARGB value. |
+| [**LineColor**](#circle-linecolor-property) | Specifies the line color as an ARGB value. |
+| [**LineWidth**](#circle-linewidth-property) | Specifies the line width in pixels. |
+| [**Radius**](#circle-radius-property) | Specifies the circle radius. |
+| [**SkyRelative**](#circle-skyrelative-property) | Specifies whether the circle size is absolute or relative. |
 
 | Method | Description |
 | :-- |
-| [**SetCenter**](#CircleSetCenter) | Specifies the center coordinates of the circle. |
+| [**SetCenter**](#circle-setcenter-property) | Specifies the center coordinates of the circle. |
 
 
 {% method -%}
@@ -1895,8 +1895,9 @@ An Annotation Object is inherited by the [**Circle**](#circle-object) object, th
 
 Typically one or more annotations are added to a view when a user clicks on a custom UI element such as a checkbox, and then those annotations are removed when the user deselects that UI element.
 
-#### Syntax
 {% sample lang="js" -%}
+#### Syntax
+
 ```js
 wwtControl.addAnnotation(
   annotation  [Annotation]
@@ -2412,9 +2413,11 @@ wwtControl.loadImageCollection("[path]//imageFile.wtml");
 ```
 {% endmethod %}
 
+
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
+
 
 {% method -%}
 ### WWTControl LoadTour Method
@@ -2838,10 +2841,10 @@ wwtControl.setForegroundOpacity(
 wwtControl.setForegroundOpacity(0.8);
 ```
 {% endmethod %}
+
 #### Samples
 
 *   [WWT Web Client Images](#WWTWebClientImages)
-
 
 {% method -%}
 ### WWTControl StopTour Method
