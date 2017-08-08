@@ -625,7 +625,6 @@ The **LineColor** property specifies the line color as an ARGB value.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 PolyLine.set_lineColor([uint])
 [uint] PolyLine.get_lineColor()
@@ -679,7 +678,6 @@ The **AddPoint** method adds a point to a polyline.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 PolyLine.addPoint(
   x  [Double],
@@ -773,7 +771,6 @@ The **ConstellationBoundryColor** property specifies the constellation boundary 
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.setConstellationBoundryColor([uint])
 [uint] wwtControl.settings.getConstellationBoundryColor()
@@ -801,7 +798,6 @@ The **ConstellationFigureColor** property specifies the constellation figure col
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.setConstellationFigureColor([uint])
 [uint] wwtControl.settings.getConstellationFigureColor()
@@ -829,7 +825,6 @@ The **ConstellationSelectionColor** property specifies the constellation selecti
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.setConstellationSelectionColor([uint])
 [uint] wwtControl.settings.getConstellationSelectionColor()
@@ -859,7 +854,6 @@ The **EclipticColor** property specifies the ecliptic color as an ARGB value.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_eclipticColor([uint])
 [uint] wwtControl.settings.get_eclipticColor()
@@ -1078,7 +1072,6 @@ The **ShowConstellationBoundries** property specifies whether to show constellat
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showConstellationBoundries([Bool])
 [Bool] wwtControl.settings.get_showConstellationBoundries()
@@ -1108,7 +1101,6 @@ The **ShowConstellationFigures** property specifies whether to show constellatio
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showConstellationFigures([Bool])
 [Bool] wwtControl.settings.get_showConstellationFigures()
@@ -1138,7 +1130,6 @@ The **ShowConstellationSelection** property specifies whether to show only the s
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showConstellationSelection([Bool])
 [Bool] wwtControl.settings.get_showConstellationSelection()
@@ -1168,7 +1159,6 @@ The **ShowCrosshairs** property specifies whether to show cross-hairs.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showCrosshairs([Bool])
 [Bool] wwtControl.settings.set_showCrosshairs()
@@ -1200,7 +1190,6 @@ The **ShowEcliptic** property specifies whether to show the ecliptic grid.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showEcliptic([Bool])
 [Bool] wwtControl.settings.get_showEcliptic()
@@ -1217,7 +1206,8 @@ This setting is equivalent to the **Grids > Ecliptic Grid** checkbox in the laye
 wwtControl.settings.set_showEcliptic(true);
 ```
 
-![Ecliptic](images/Ecliptic.jpg){% endmethod %}
+![Ecliptic](images/Ecliptic.jpg)
+{% endmethod %}
 
 {% method -%}
 ### Settings ShowElevationModel Property
@@ -1229,7 +1219,6 @@ The **ShowElevationModel** property specifies whether to show the elevation mode
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showElevation([Bool])
 [Bool] wwtControl.settings.get_showElevation()
@@ -1267,7 +1256,6 @@ The **ShowFieldOfView** property specifies whether to show the field of view box
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showFieldOfView([Bool])
 [Bool] wwtControl.settings.get_showFieldOfView()
@@ -1327,7 +1315,6 @@ The **ShowHorizon** property specifies whether to show the horizon.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showHorizon([Bool])
 [Bool] wwtControl.settings.get_showHorizon()
@@ -1356,7 +1343,6 @@ The **ShowHorizonPanorama** property specifies whether to show the horizon in pa
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showHorizonPanorama([Bool])
 [Bool] wwtControl.settings.get_showHorizonPanorama()
@@ -1385,7 +1371,6 @@ The **ShowMoonsAsPointSource** property specifies whether to show the moon as a 
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showMoonsAsPointSource([Bool])
 [Bool] wwtControl.settings.get_showMoonsAsPointSource()
@@ -1414,7 +1399,6 @@ The **ShowSolarSystem** property specifies whether to show the 3-D solar system 
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showSolarSystem([Bool])
 [Bool] wwtControl.settings.get_showSolarSystem()
@@ -1443,7 +1427,6 @@ The **ShowUTCTime** property specifies whether to show the time as a UTC value.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showUTCTime([Bool])
 [Bool] wwtControl.settings.get_showUTCTime()
@@ -1472,7 +1455,6 @@ The **SolarSystemCosmos** property specifies whether to show the solar system co
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemCosmos([Bool])
 [Bool] wwtControl.settings.get_solarSystemCosmos()
@@ -1501,7 +1483,6 @@ The **SolarSystemLighting** property specifies whether to show the lighting effe
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemLighting([Bool])
 [Bool] wwtControl.settings.get_solarSystemLighting()
@@ -1522,7 +1503,6 @@ wwtControl.settings.set_solarSystemLighting(true);
 
 The lighting of the Sun on Saturn.
 {% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1535,7 +1515,6 @@ The **SolarSystemMilkyWay** property specifies whether to show the Milky Way whe
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemMilkyWay([Bool])
 [Bool] wwtControl.settings.get_solarSystemMilkyWay()
@@ -1556,7 +1535,6 @@ wwtControl.settings.set_solarSystemMilkyWay(true);
 
 The Milky Way appears to the left of Saturn.
 {% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1569,7 +1547,6 @@ The **SolarSystemMultiRes** property specifies whether to show the multi-resolut
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemMultiRes([Bool])
 [Bool] wwtControl.settings.get_solarSystemMultiRes()
@@ -1595,7 +1572,6 @@ The Caribbean in standard textures.
 
 The Caribbean with multi-resolution textures.
 {% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1608,7 +1584,6 @@ The **SolarSystemOrbitColor** property specifies the solar system orbit colors a
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemOrbitColor([uint])
 [uint] wwtControl.settings.get_solarSystemOrbitColor()
@@ -1638,7 +1613,6 @@ The **SolarSystemOrbits** property specifies whether to show the orbits when sho
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemOrbits([Bool])
 [Bool] wwtControl.settings.get_solarSystemOrbits()
@@ -1659,7 +1633,6 @@ wwtControl.settings.set_solarSystemOrbits(true);
 
 The orbits of all the solar system planets are shown in the SolarSystemOrbitColor.
 {% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1672,7 +1645,6 @@ The **SolarSystemOverlays** property specifies whether to show the solar system 
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemOverlays([Bool])
 [Bool] wwtControl.settings.get_solarSystemOverlays()
@@ -1701,7 +1673,6 @@ The **SolarSystemScale** property specifies how to scale the size of the Sun and
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemScale([int])
 [int] wwtControl.settings.get_solarSystemScale()
@@ -1725,8 +1696,6 @@ The Sun shown actual size.
 
 The Sun with maximum scaling.
 {% endmethod %}
-{% endmethod %}
-
 
 {% method -%}
 ### Settings SolarSystemStars Property
@@ -1738,7 +1707,6 @@ The **SolarSystemStars** property specifies whether to render stars when showing
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_solarSystemStars([Bool])
 [Bool] wwtControl.settings.get_solarSystemStars()
@@ -1759,8 +1727,6 @@ wwtControl.settings.set_solarSystemStars(true);
 
 | Saturn and the stars. |
 {% endmethod %}
-{% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1773,7 +1739,6 @@ The **UserID** property is used to retrieve the user ID as a Guid.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_userID([Guid])
 [Guid] wwtControl.settings.get_userID()
@@ -1791,6 +1756,7 @@ The Guid is in registry format, without the accompanying "{}" braces. When a use
 // Display the user ID in the "user" text box
 document.getElementById("user").value = wwtControl.settings.get_userID();
 ```
+{% endmethod %}
 
 ## WWTControl Object
 
@@ -1832,10 +1798,6 @@ The WWTControl object does not inherit any classes that have exposed properties 
 | [**wwtArrived**](#wwtArrived) | Fired when a change to the view from a drag, zoom, or goto comes to a halt. |
 | [**wwtClick**](#wwtClick) | Fired when the left mouse button is clicked. |
 | [**wwtReady**](#wwtReady) | Fired when the web client is initialized. |
-{% endmethod %}
-{% endmethod %}
-{% endmethod %}
-
 
 {% method -%}
 ### WWTControl Fov Property
@@ -1847,7 +1809,6 @@ The **Fov** property contains the field of view in degrees.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 [double] wwtControl.get_fov()
 ```
@@ -1879,7 +1840,8 @@ function FovDec() {
 
 #### Samples
 
-*   [WWT Web Client Fov](#WWTWebClientFov){% endmethod %}
+*   [WWT Web Client Fov](#WWTWebClientFov)
+{% endmethod %}
 
 {% method -%}
 ### WWTControl Settings Property
@@ -1889,7 +1851,6 @@ The **Settings** property references the [**Settings**](#SettingsObject) object 
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings [Settings]
 ```
@@ -1907,10 +1868,12 @@ wwtControl.settings.set_showCrosshairs(true);
 wwtControl.settings.set_gridColor("0x88880000");   // Transparent red
 wwtControl.settings.set_showGrid(true);
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Simple](#WWTWebClientSimple){% endmethod %}
+*   [WWT Web Client Simple](#WWTWebClientSimple)
+{% endmethod %}
 
 {% method -%}
 ### WWTControl SmoothAnimation Property
@@ -1922,7 +1885,6 @@ The **SmoothAnimation** property specifies whether to pan smoothly or quickly to
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.set_smoothAnimation([Bool])
 [Bool] wwtControl.get_smoothAnimation()
@@ -1938,10 +1900,12 @@ If this property is set to true the panning will be smoother but slower than if 
 ```js
 wwtControl.set_smoothAnimation(true);
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Images](#WWTWebClientImages){% endmethod %}
+*   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
 
 {% method -%}
 ### WWTControl AddAnnotation Method
@@ -1949,9 +1913,7 @@ wwtControl.set_smoothAnimation(true);
 The **AddAnnotation** method adds an [**Annotation**](#AnnotationObject) object to the view.
 
 #### Syntax
-
 {% sample lang="js" -%}
-
 ```js
 wwtControl.addAnnotation(
   annotation  [Annotation]
@@ -2003,10 +1965,12 @@ function toggleSetting(text) {
     }
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Poly](#WWTWebClientPoly){% endmethod %}
+*   [WWT Web Client Poly](#WWTWebClientPoly)
+{% endmethod %}
 
 {% method -%}
 ### WWTControl ClearAnnotations Method
@@ -2016,7 +1980,6 @@ The **ClearAnnotations** method removes all annotations from the view.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.clearAnnotations()
 ```
@@ -2040,9 +2003,12 @@ None.
 wwtControl.clearAnnotations();
 ```
 
+{% endmethod %}
+
 #### Samples
 
-*   [WWT Web Client Click Event](#WWTWebClientClickEvent){% endmethod %}
+*   [WWT Web Client Click Event](#WWTWebClientClickEvent)
+{% endmethod %}
 
 {% method -%}
 ### WWTControl CreateCircle Method
@@ -2052,7 +2018,6 @@ The **CreateCircle** method creates a [**Circle**](#circle-object) object, and r
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.createCircle(
   fill  [Bool]
@@ -2092,6 +2057,7 @@ function createWWTCircle(fill, lineColor, fillColor, lineWidth, opacity, radius,
     return circle;
 }
 ```
+{% endmethod %}
 
 ![Circles](images/Circles.jpg)
 
@@ -2100,7 +2066,7 @@ In this image,  circle objects filled with a transparent color have been used t
 #### Samples
 
 *   [WWT Web Client Arrived](#WWTWebClientArrived)
-*   [WWT Web Client Poly](#WWTWebClientPoly){% endmethod %}
+*   [WWT Web Client Poly](#WWTWebClientPoly)
 
 {% method -%}
 ### WWTControl CreatePolygon Method
@@ -2110,7 +2076,6 @@ The **CreatePolygon** method creates a [**Poly**](#poly-object) object (a polygo
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.CreatePolygon(
   fill  [Bool]
@@ -2158,10 +2123,11 @@ myPolygon = createWWTPolygon(true, "0x880000ff", "0x8800ff00", 2, 1.0, myPoints)
 ![Polygons](images/Polygons.jpg)
 
 This image shows the use of Polygon objects to identify a hierarchy of areas. If these areas are annotated, then increasingly detailed descriptions of the stellar sources can be given.
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Poly](#WWTWebClientPoly){% endmethod %}
+*   [WWT Web Client Poly](#WWTWebClientPoly)
 
 {% method -%}
 ### WWTControl CreatePolyLine Method
@@ -2171,7 +2137,6 @@ The **CreatePolyLine** method creates a [**PolyLine**](#polyline-object) object,
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.createPolyLine(
   fill  [Bool]
@@ -2223,10 +2188,11 @@ var myPolyline = createWWTPolyLine("0x8800FFFF", 2, 1.0, points);
 
 ![Polylines](images/Polylines.jpg)
 This image shows some common variations of Polyline objects.
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Poly](#WWTWebClientPoly){% endmethod %}
+*   [WWT Web Client Poly](#WWTWebClientPoly)
 
 {% method -%}
 ### WWTControl GetDec Method
@@ -2236,7 +2202,6 @@ The **GetDec** method retrieves the declination for the view.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.getDec()
 ```
@@ -2266,10 +2231,11 @@ wwtControl.gotoRaDecZoom(newRA, newDec, newFov, false);
 // If the user selects a custom control to go back to the previous view...
 wwtControl.gotoRaDecZoom(savedRA, savedDec, savedFov, false);
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Fov](#WWTWebClientFov){% endmethod %}
+*   [WWT Web Client Fov](#WWTWebClientFov)
 
 {% method -%}
 ### WWTControl GetRA Method
@@ -2279,7 +2245,6 @@ The **GetRA** method retrieves the right ascension for the view.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.getRA()
 ```
@@ -2309,10 +2274,11 @@ function FovDec() {
     }
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Fov](#WWTWebClientFov){% endmethod %}
+*   [WWT Web Client Fov](#WWTWebClientFov)
 
 {% method -%}
 ### WWTControl GotoRaDecZoom Method
@@ -2322,7 +2288,6 @@ The **GotoRaDecZoom** method is used to go to a new viewing position.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.gotoRaDecZoom(
   ra  [Double],
@@ -2373,11 +2338,12 @@ function DMS(d, m, s) {
 }
 wwtControl.gotoRaDecZoom(HMS(06, 25, 30), DMS(45, 00, 00), 30, false);
 ```
+{% endmethod %}
 
 #### Samples
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
-*   [WWT Web Client Fov](#WWTWebClientFov){% endmethod %}
+*   [WWT Web Client Fov](#WWTWebClientFov)
 
 {% method -%}
 ### WWTControl HideUI Method
@@ -2389,7 +2355,6 @@ The **HideUI** method specifies whether to hide the UI for the view.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.hideUI(
   hide  [Bool]
@@ -2428,10 +2393,11 @@ function toggleSetting(text) {
 // The toggleSetting function should be used along with the following html input control
 <input id="UI" type="checkbox" checked="checked" onclick="toggleSetting('ShowUI');"\>
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Simple](#WWTWebClientSimple){% endmethod %}
+*   [WWT Web Client Simple](#WWTWebClientSimple)
 
 {% method -%}
 ### WWTControl LoadImageCollection Method
@@ -2442,7 +2408,6 @@ The **LoadImageCollection** method is used to load a WTML
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.loadImageCollection(
   url  [String]
@@ -2474,10 +2439,11 @@ wwtControl.loadImageCollection("imageFile.wtml");
 // If the data file requires a full path
 wwtControl.loadImageCollection("[path]//imageFile.wtml");
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Images](#WWTWebClientImages){% endmethod %}
+*   [WWT Web Client Images](#WWTWebClientImages)
 
 {% method -%}
 ### WWTControl LoadTour Method
@@ -2487,7 +2453,6 @@ The **LoadTour** method is used to load and start a tour.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.loadTour(
   url  [String]
@@ -2517,10 +2482,11 @@ Tours can be stand-alone, or part of collections. For more information on tours 
 ```js
 wwtControl.loadTour("http://www.worldwidetelescope.org/docs/wtml/tourone.wtt");
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Tours](#WWTWebClientTours){% endmethod %}
+*   [WWT Web Client Tours](#WWTWebClientTours)
 
 {% method -%}
 ### WWTControl LoadVOTable Method
@@ -2532,7 +2498,6 @@ The **LoadVOTable** method is used to load a VO (Virtual Observatory) table.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.loadVOTable(
   url  [String],
@@ -2572,7 +2537,6 @@ The **PlayTour** method is used to restart a tour from the beginning.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.playTour()
 ```
@@ -2597,10 +2561,11 @@ function restartTour(){
     wwtControl.playTour();
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Tours](#WWTWebClientTours){% endmethod %}
+*   [WWT Web Client Tours](#WWTWebClientTours)
 
 {% method -%}
 ### WWTControl RemoveAnnotation Method
@@ -2610,7 +2575,6 @@ The **RemoveAnnotation** method removes the specified annotation from the view.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.removeAnnotation(
   annotation  [Annotation]
@@ -2660,10 +2624,12 @@ function toggleSetting(text) {
     }
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Poly](#WWTWebClientPoly){% endmethod %}
+*   [WWT Web Client Poly](#WWTWebClientPoly)
+
 
 {% method -%}
 ### WWTControl SetBackgroundImageByName Method
@@ -2673,7 +2639,6 @@ The **SetBackgroundImageByName** method loads an image to use as the view backgr
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.setBackgroundImageByName(
   name  [String]
@@ -2706,10 +2671,12 @@ wwtControl.loadImageCollection("MyImageCollection.wtml");
 wwtControl.setBackgroundImageByName("The Big Picture");
 wwtControl.gotoRaDecZoom(45.5, 122.0, 2, false);
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Images](#WWTWebClientImages){% endmethod %}
+*   [WWT Web Client Images](#WWTWebClientImages)
+
 
 {% method -%}
 ### WWTControl SetForegroundImageByName Method
@@ -2719,7 +2686,6 @@ The **SetForegroundImageByName** method loads an image to use as the view foregr
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.setForegroundImageByName(
   name  [String]
@@ -2854,10 +2820,11 @@ The "Serpens.wtml" file contains the following:
       </Place>
     </Folder>
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Images](#WWTWebClientImages){% endmethod %}
+*   [WWT Web Client Images](#WWTWebClientImages)
 
 {% method -%}
 ### WWTControl SetForegroundOpacity Method
@@ -2871,7 +2838,6 @@ This method is not currently implemented.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.setForegroundOpacity(
   opacity  [Double]
@@ -2900,7 +2866,8 @@ wwtControl.setForegroundOpacity(0.8);
 
 #### Samples
 
-*   [WWT Web Client Images](#WWTWebClientImages){% endmethod %}
+*   [WWT Web Client Images](#WWTWebClientImages)
+{% endmethod %}
 
 {% method -%}
 ### WWTControl StopTour Method
@@ -2910,7 +2877,6 @@ The **StopTour** method is used to stop and exit a tour.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.stopTour()
 ```
@@ -2939,10 +2905,11 @@ function stopTour() {
     wwtControl.stopTour();
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Tours](#WWTWebClientTours){% endmethod %}
+*   [WWT Web Client Tours](#WWTWebClientTours)
 
 {% method -%}
 ### WWTControl AnnotationClicked Event
@@ -2952,7 +2919,6 @@ The **AnnotationClicked** event is fired when an Annotation object is clicked.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 function annotationClicked(obj, eventArgs){}
 ```
@@ -2969,10 +2935,11 @@ function annotationClicked(obj, eventArgs) {
     alert("Annotation ID:" + eventArgs.get_id().toString());
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Images](#WWTWebClientImages){% endmethod %}
+*   [WWT Web Client Images](#WWTWebClientImages)
 
 {% method -%}
 ### WWTControl Arrived Event
@@ -2982,7 +2949,6 @@ The **wwtArrived** event is fired when a change to the view from a drag, zoom, o
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 function arrived(){}
 ```
@@ -3015,10 +2981,11 @@ function myArrivedEvent(obj, eventArgs) {
     wwtControl.addAnnotation(circle);
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Arrived](#WWTWebClientArrived){% endmethod %}
+*   [WWT Web Client Arrived](#WWTWebClientArrived)
 
 {% method -%}
 ### WWTControl Click Event
@@ -3028,7 +2995,6 @@ The **wwtClick** event is fired when the left mouse button is clicked.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 function click(obj, eventArgs){}
 ```
@@ -3048,10 +3014,11 @@ function clicked(obj, eventArgs) {
     alert("Clicked on: " + eventArgs.get_RA().toString() + ", " + eventArgs.get_dec().toString());
 }
 ```
+{% endmethod %}
 
 #### Samples
 
-*   [WWT Web Client Click Event](#WWTWebClientClickEvent){% endmethod %}
+*   [WWT Web Client Click Event](#WWTWebClientClickEvent)
 
 {% method -%}
 ### WWTControl Ready Event
@@ -3061,7 +3028,6 @@ The **wwtClick** event is fired when the web client is initialized.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 function ready(){}
 ```
@@ -3089,7 +3055,7 @@ function wwtReady() {
     wwtControl.settings.set_showConstellationFigures(false);
 }
 ```
-
+{% endmethod %}
 #### Samples
 
 *   [WWT Web Client Simple](#WWTWebClientSimple)
