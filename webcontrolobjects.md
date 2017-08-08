@@ -436,8 +436,6 @@ The Poly object inherits the properties of the [**Annotation**](#AnnotationObjec
 | :-- |
 | [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |
 {% endmethod %}
-{% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1179,7 +1177,6 @@ wwtControl.settings.set_showCrosshairs(true);
 
 The crosshairs, or reticle, shown with Mars in view.
 {% endmethod %}
-{% endmethod %}
 
 
 {% method -%}
@@ -1242,7 +1239,6 @@ The Himalayan mountains, shown without elevation data.
 ![Himalayas model](images/ElevationModel.jpg)
 
 The Himalayan mountains, with elevation data.
-{% endmethod %}
 {% endmethod %}
 
 
