@@ -427,7 +427,6 @@ The Poly object inherits the properties of the [**Annotation**](#AnnotationObjec
 | [**AddPoint**](#PolyAddPoint) | Adds a point to a polygon. |
 
 
-
 {% method -%}
 ### Poly Fill Property
 
@@ -1610,16 +1609,17 @@ Note: This feature is not implemented.
 
 The **SolarSystemOverlays** property specifies whether to show the solar system overlays.
 
+
+#### Remarks
+
+None.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemOverlays([Bool])
 [Bool] wwtControl.settings.get_solarSystemOverlays()
 ```
-
-#### Remarks
-
-None.
 
 #### Example Code
 
@@ -1637,16 +1637,18 @@ Note: This feature is not implemented.
 
 The **SolarSystemScale** property specifies how to scale the size of the Sun and the planets.
 
+
+
+#### Remarks
+
+If this value is set to 1, then the Sun and planets will appear actual size in the Solar System view. To increase the scale, this value can be set to a number between 1 and 100\. This setting is equivalent to the **Planet Size** slider.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemScale([int])
 [int] wwtControl.settings.get_solarSystemScale()
 ```
-
-#### Remarks
-
-If this value is set to 1, then the Sun and planets will appear actual size in the Solar System view. To increase the scale, this value can be set to a number between 1 and 100\. This setting is equivalent to the **Planet Size** slider.
 
 #### Example Code
 
@@ -1670,16 +1672,16 @@ Note: This feature is not implemented.
 
 The **SolarSystemStars** property specifies whether to render stars when showing the solar system.
 
+#### Remarks
+
+This setting is equivalent to the **View > Show Stars** checkbox.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_solarSystemStars([Bool])
 [Bool] wwtControl.settings.get_solarSystemStars()
 ```
-
-#### Remarks
-
-This setting is equivalent to the **View > Show Stars** checkbox.
 
 #### Example Code
 
@@ -1701,16 +1703,16 @@ Note: This feature is not implemented.
 
 The **UserID** property is used to retrieve the user ID as a Guid.
 
+#### Remarks
+
+The Guid is in registry format, without the accompanying "{}" braces. When a user runs the client, a unique Guid is generated for them. The Guid is not persistent and will be different each time the same user runs the client. It can be used to identify a particular user during one session.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings.set_userID([Guid])
 [Guid] wwtControl.settings.get_userID()
 ```
-
-#### Remarks
-
-The Guid is in registry format, without the accompanying "{}" braces. When a user runs the client, a unique Guid is generated for them. The Guid is not persistent and will be different each time the same user runs the client. It can be used to identify a particular user during one session.
 
 #### Example Code
 
@@ -1770,15 +1772,16 @@ Note: This feature is not implemented.
 
 The **Fov** property contains the field of view in degrees.
 
+
+#### Remarks
+
+This property is read-only. The maximum field of view is 60 degrees, the minimum is close to zero, at 0.00022910934437488727 degrees. Field of view can be considered to be the inverse of the zoom factor -- the smaller the field of view the greater the zoom factor.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 [double] wwtControl.get_fov()
 ```
-
-#### Remarks
-
-This property is read-only. The maximum field of view is 60 degrees, the minimum is close to zero, at 0.00022910934437488727 degrees. Field of view can be considered to be the inverse of the zoom factor -- the smaller the field of view the greater the zoom factor.
 
 #### Example Code
 
@@ -1812,15 +1815,17 @@ function FovDec() {
 
 The **Settings** property references the [**Settings**](#SettingsObject) object for the WWTControl.
 
+
+
+#### Remarks
+
+This property is read-only, though individual settings can have their values set (refer to the [**Settings**](#SettingsObject) object).
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.settings [Settings]
 ```
-
-#### Remarks
-
-This property is read-only, though individual settings can have their values set (refer to the [**Settings**](#SettingsObject) object).
 
 #### Example Code
 
@@ -1845,16 +1850,17 @@ Note: This feature is not implemented.
 
 The **SmoothAnimation** property specifies whether to pan smoothly or quickly to the new location.
 
+
+#### Remarks
+
+If this property is set to true the panning will be smoother but slower than if the property is false. This property is equivalent to the **Settings/Smooth Panning** checkbox in the UI, and the purpose of setting it to false is to improve CPU performance.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 wwtControl.set_smoothAnimation([Bool])
 [Bool] wwtControl.get_smoothAnimation()
 ```
-
-#### Remarks
-
-If this property is set to true the panning will be smoother but slower than if the property is false. This property is equivalent to the **Settings/Smooth Panning** checkbox in the UI, and the purpose of setting it to false is to improve CPU performance.
 
 #### Example Code
 
@@ -1874,14 +1880,6 @@ wwtControl.set_smoothAnimation(true);
 
 The **AddAnnotation** method adds an [**Annotation**](#AnnotationObject) object to the view.
 
-#### Syntax
-{% sample lang="js" -%}
-```js
-wwtControl.addAnnotation(
-  annotation  [Annotation]
-)
-```
-
 #### Parameters
 
 _annotation_
@@ -1896,6 +1894,14 @@ This method does not return a value.
 An Annotation Object is inherited by the [**Circle**](#circle-object) object, the [**Poly**](#poly-object) object, and the [**PolyLine**](#polyline-object) object, so adding an annotation will add one of these graphics to the view, in addition to providing the annotation text.
 
 Typically one or more annotations are added to a view when a user clicks on a custom UI element such as a checkbox, and then those annotations are removed when the user deselects that UI element.
+
+#### Syntax
+{% sample lang="js" -%}
+```js
+wwtControl.addAnnotation(
+  annotation  [Annotation]
+)
+```
 
 #### Example Code
 
@@ -1939,11 +1945,6 @@ function toggleSetting(text) {
 
 The **ClearAnnotations** method removes all annotations from the view.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.clearAnnotations()
-```
 
 #### Parameters
 
@@ -1956,6 +1957,12 @@ This method does not return a value.
 #### Remarks
 
 None.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.clearAnnotations()
+```
 
 #### Example Code
 
@@ -1976,14 +1983,6 @@ wwtControl.clearAnnotations();
 
 The **CreateCircle** method creates a [**Circle**](#circle-object) object, and returns a reference to the created object.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.createCircle(
-  fill  [Bool]
-)
-```
-
 #### Parameters
 
 _fill_
@@ -1996,6 +1995,15 @@ This method returns a reference to a [**Circle**](#circle-object) object.
 #### Remarks
 
 In addition to creating the circle an [**Annotation**](#AnnotationObject) object (which is inherited by the Circle object) will be created to provide supporting text.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.createCircle(
+  fill  [Bool]
+)
+```
 
 #### Example Code
 
@@ -2033,13 +2041,6 @@ In this image,  circle objects filled with a transparent color have been used t
 
 The **CreatePolygon** method creates a [**Poly**](#poly-object) object (a polygon), and returns a reference to the created object.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.CreatePolygon(
-  fill  [Bool]
-)
-```
 
 #### Parameters
 
@@ -2053,6 +2054,14 @@ This method returns a reference to the created [**Poly**](#poly-object) object.
 #### Remarks
 
 In addition to creating the polygon an [**Annotation**](#AnnotationObject) object (which is inherited by the poly object) will be created to provide supporting text.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.CreatePolygon(
+  fill  [Bool]
+)
+```
 
 #### Example Code
 
@@ -2093,13 +2102,6 @@ This image shows the use of Polygon objects to identify a hierarchy of areas. If
 
 The **CreatePolyLine** method creates a [**PolyLine**](#polyline-object) object, and returns a reference to the created object.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.createPolyLine(
-  fill  [Bool]
-)
-```
 
 #### Parameters
 
@@ -2115,6 +2117,14 @@ This method returns a reference to a [**PolyLine**](#polyline-object) object.
 In addition to creating the polyline, an [**Annotation**](#AnnotationObject) object (which is inherited by the polyline object) will be created to provide supporting text.
 
 The rendering of a polyline will simply take each point in the list and draw a line to the next. In order to have a more complex polyline, for example with forks with two or more lines coming from a single point, then there are two main options, either create several polyline objects sharing a single point, or backtrack over points after reaching the end of one fork, and then continuing to add points along the second fork, and so on.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.createPolyLine(
+  fill  [Bool]
+)
+```
 
 #### Example Code
 
@@ -2157,11 +2167,6 @@ This image shows some common variations of Polyline objects.
 
 The **GetDec** method retrieves the declination for the view.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.getDec()
-```
 
 #### Parameters
 
@@ -2174,6 +2179,13 @@ This method returns a double containing the declination in decimal degrees.
 #### Remarks
 
 The declination of an object is how many degrees it is north or south of the celestial equator. It is used in conjunction with right ascension, which is measured eastward from a prime meridian on the sky. The prime meridian passes through the position of the Sun at the time of the vernal equinox, so its position changes slowly over the years, due to the precession of the equinoxes. The position of the celestial poles also changes with precession, so to locate an object from its right ascension and declination, you must also know the date for which those coordinates are valid; that date is called the epoch of the coordinates. WorldWide Telescope requires the epoch to be J2000.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.getDec()
+```
 
 #### Example Code
 
@@ -2199,11 +2211,6 @@ wwtControl.gotoRaDecZoom(savedRA, savedDec, savedFov, false);
 
 The **GetRA** method retrieves the right ascension for the view.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.getRA()
-```
 
 #### Parameters
 
@@ -2216,6 +2223,12 @@ This method returns a double containing the right ascension in decimal degrees.
 #### Remarks
 
 Refer to the remarks for [**GetDec**](#ViewGetDec).
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.getRA()
+```
 
 #### Example Code
 
@@ -2241,17 +2254,6 @@ function FovDec() {
 
 The **GotoRaDecZoom** method is used to go to a new viewing position.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.gotoRaDecZoom(
-  ra  [Double],
-  dec  [Double],
-  fov  [Double],
-  instant  [Bool]
-)
-```
-
 #### Parameters
 
 _ra_
@@ -2270,6 +2272,18 @@ This method does not return a value.
 #### Remarks
 
 This method is one of the most used of the API set, controlling the changing of the views.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.gotoRaDecZoom(
+  ra  [Double],
+  dec  [Double],
+  fov  [Double],
+  instant  [Bool]
+)
+```
 
 #### Example Code
 
@@ -2307,13 +2321,7 @@ Note: This feature is not implemented.
 
 The **HideUI** method specifies whether to hide the UI for the view.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.hideUI(
-  hide  [Bool]
-)
-```
+
 
 #### Parameters
 
@@ -2327,6 +2335,14 @@ This method does not return a value.
 #### Remarks
 
 If the UI is hidden, the main menu, thumbnails, collections, tours and so on will not be visible, giving an uninterrupted view. This can be helpful when control of the view is being handled by a custom client UI.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.hideUI(
+  hide  [Bool]
+)
+```
 
 #### Example Code
 
@@ -2359,13 +2375,6 @@ function toggleSetting(text) {
 The **LoadImageCollection** method is used to load a WTML
  collection file, containing links to foreground and background images.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.loadImageCollection(
-  url  [String]
-)
-```
 
 #### Parameters
 
@@ -2382,6 +2391,15 @@ This method does not return a value.
 For a description of the content of image collection files, refer to the [WorldWide Telescope Data Files Reference](WorldWideTelescopeDataFilesReference.html) document.
 
 After the collection is loaded, the images can be referenced by their string name using the [**SetBackgroundImageByName**](#ViewSetBackgroundImageByName) and [**SetForegroundImageByName**](#ViewSetForegroundImageByName) methods.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.loadImageCollection(
+  url  [String]
+)
+```
 
 #### Example Code
 
@@ -2403,14 +2421,6 @@ wwtControl.loadImageCollection("[path]//imageFile.wtml");
 
 The **LoadTour** method is used to load and start a tour.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.loadTour(
-  url  [String]
-)
-```
-
 #### Parameters
 
 _url_
@@ -2427,6 +2437,16 @@ Tours are a sequence of tour stops. Each tour stop describes a viewing position,
 ![](images/endtourdialog.jpg)
 
 Tours can be stand-alone, or part of collections. For more information on tours refer to the WorldWide Telescope User Guide, and also to the [WorldWide Telescope Data Files Reference](WorldWideTelescopeDataFilesReference.html) document.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.loadTour(
+  url  [String]
+)
+```
+
 
 #### Example Code
 
@@ -2447,14 +2467,6 @@ Note: This feature is not implemented.
 
 The **LoadVOTable** method is used to load a VO (Virtual Observatory) table.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.loadVOTable(
-  url  [String],
-  useCurrentView  [Bool]
-)
-```
 
 #### Parameters
 
@@ -2471,6 +2483,16 @@ This method does not return a value.
 
 The VO data will appear as a spreadsheet in its own window. For details on the VO standard for storing data, refer to [us-vo.org](http://www.us-vo.org/).
 
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.loadVOTable(
+  url  [String],
+  useCurrentView  [Bool]
+)
+```
+
 #### Example Code
 
 {% sample lang="js" -%}
@@ -2485,12 +2507,6 @@ wwtControl.loadVOTable("path.xml", true);
 
 The **PlayTour** method is used to restart a tour from the beginning.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.playTour()
-```
-
 #### Parameters
 
 This method takes no parameters.
@@ -2502,6 +2518,14 @@ This method does not return a value.
 #### Remarks
 
 Refer to the remarks for the [**LoadTour**](#ViewLoadTour) method.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.playTour()
+```
+
 
 #### Example Code
 
@@ -2522,13 +2546,6 @@ function restartTour(){
 
 The **RemoveAnnotation** method removes the specified annotation from the view.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.removeAnnotation(
-  annotation  [Annotation]
-)
-```
 
 #### Parameters
 
@@ -2542,6 +2559,14 @@ This method does not return a value.
 #### Remarks
 
 None.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.removeAnnotation(
+  annotation  [Annotation]
+)
+```
 
 #### Example Code
 
@@ -2585,13 +2610,6 @@ function toggleSetting(text) {
 
 The **SetBackgroundImageByName** method loads an image to use as the view background.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.setBackgroundImageByName(
-  name  [String]
-)
-```
 
 #### Parameters
 
@@ -2610,6 +2628,14 @@ The string used as the name parameter for this method should be present as a **P
 A background image need not cover the whole sky, and can in fact be a simple study of one object in space. In this case the rest of the sky will be dark and empty, except for the solar system which is not considered foreground or background.
 
 ![](images/BackgroundImage.jpg)
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.setBackgroundImageByName(
+  name  [String]
+)
+```
 
 #### Example Code
 
@@ -2630,14 +2656,6 @@ wwtControl.gotoRaDecZoom(45.5, 122.0, 2, false);
 ### WWTControl SetForegroundImageByName Method
 
 The **SetForegroundImageByName** method loads an image to use as the view foreground.
-
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.setForegroundImageByName(
-  name  [String]
-)
-```
 
 #### Parameters
 
@@ -2696,6 +2714,15 @@ To load a survey as a foreground image, or a study as a background image, use **
 The Sun and solar system planets and moons are not considered either foreground or background, and will be present in any sky view.
 
 Note that the _images_ used for both foreground and background are tiled image pyramids. Refer to the tools documentation [WorldWide Telescope Data Tools Guide](WorldWideTelescopeDataToolsGuide.html) for details on how to create these image pyramids, and to the [WorldWide Telescope Data Files Reference](WorldWideTelescopeDataFilesReference.html) for details on the data file formats.
+
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.setForegroundImageByName(
+  name  [String]
+)
+```
 
 #### Example Code
 
@@ -2782,13 +2809,6 @@ The **SetForegroundOpacity** method specifies the opacity of the foreground imag
 
 This method is not currently implemented.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.setForegroundOpacity(
-  opacity  [Double]
-)
-```
 
 #### Parameters
 
@@ -2802,6 +2822,14 @@ This method does not return a value.
 #### Remarks
 
 This setting enables some see-through in the foreground image, to enable a comparison with the background image. Note that if the foreground image is a .png file, then some transparency information is usually held within the file. The [**SetForegroundImageByName**](#ViewSetForegroundImageByName) method sets the foreground opacity to 1.0 each time a new image is loaded.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.setForegroundOpacity(
+  opacity  [Double]
+)
+```
 
 #### Example Code
 
@@ -2820,11 +2848,6 @@ wwtControl.setForegroundOpacity(0.8);
 
 The **StopTour** method is used to stop and exit a tour.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-wwtControl.stopTour()
-```
 
 #### Parameters
 
@@ -2837,6 +2860,12 @@ This method does not return a value.
 #### Remarks
 
 After a tour has been stopped with this call, it cannot be restarted from the position it was stopped at. [**PlayTour**](#ViewPlayTour) (which restarts a tour) will not work after a tour has been stopped. Also refer to the remarks for [**LoadTour**](#ViewLoadTour).
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+wwtControl.stopTour()
+```
 
 #### Example Code
 
@@ -2861,15 +2890,17 @@ function stopTour() {
 
 The **AnnotationClicked** event is fired when an Annotation object is clicked.
 
+
+#### Remarks
+
+The obj parameter is the wwt object that originated the click event and the eventArgs object contains the click event arguments accessed by the methods get_id(), get_RA(), and get_dec().
+
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 function annotationClicked(obj, eventArgs){}
 ```
-
-#### Remarks
-
-The obj parameter is the wwt object that originated the click event and the eventArgs object contains the click event arguments accessed by the methods get_id(), get_RA(), and get_dec().
 
 #### Example Code
 
@@ -2890,17 +2921,18 @@ function annotationClicked(obj, eventArgs) {
 
 The **wwtArrived** event is fired when a change to the view from a drag, zoom, or gotoRaDecZoom comes to a halt.
 
-{% sample lang="js" -%}
-#### Syntax
-```js
-function arrived(){}
-```
 
 #### Remarks
 
 When the view is to change following a drag, zoom, or gotoRaDecZoom, normally there will be an animated slew across space until the new view comes to rest. It is on the completion of the slew that this event is fired.
 
 Currently this event is not being sent if the _instant_ parameter of the **gotoRaDecZoom** method is set to True.
+
+{% sample lang="js" -%}
+#### Syntax
+```js
+function arrived(){}
+```
 
 #### Example Code
 
@@ -2935,15 +2967,17 @@ function myArrivedEvent(obj, eventArgs) {
 
 The **wwtClick** event is fired when the left mouse button is clicked.
 
+
+
+#### Remarks
+
+This event is not fired for all mouse clicks, only those when the view is stationary and the mouse click is not part of a zoom or drag procedure. In other words, it is evident that the user is clicking on an object. The RA and Dec provided in the eventArgs object are the location of the click, which will not usually be the same as the RA and Dec for the current view. The obj parameter is the wwt object that originated the click event and the eventArgs object contains the click event arguments accessed by the methods get_ra() and get_dec().
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 function click(obj, eventArgs){}
 ```
-
-#### Remarks
-
-This event is not fired for all mouse clicks, only those when the view is stationary and the mouse click is not part of a zoom or drag procedure. In other words, it is evident that the user is clicking on an object. The RA and Dec provided in the eventArgs object are the location of the click, which will not usually be the same as the RA and Dec for the current view. The obj parameter is the wwt object that originated the click event and the eventArgs object contains the click event arguments accessed by the methods get_ra() and get_dec().
 
 #### Example Code
 
@@ -2967,15 +3001,16 @@ function clicked(obj, eventArgs) {
 
 The **wwtClick** event is fired when the web client is initialized.
 
+
+#### Remarks
+
+This event is fired only once, and should be responded to by all clients. Use it to initialize internal variables appropriately, in particular the reference to the View object, shown in the example code.
+
 {% sample lang="js" -%}
 #### Syntax
 ```js
 function ready(){}
 ```
-
-#### Remarks
-
-This event is fired only once, and should be responded to by all clients. Use it to initialize internal variables appropriately, in particular the reference to the View object, shown in the example code.
 
 #### Example Code
 
