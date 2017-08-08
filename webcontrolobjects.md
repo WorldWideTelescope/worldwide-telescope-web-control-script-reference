@@ -885,7 +885,6 @@ The **GridColor** property specifies the grid color as an ARGB value.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_gridColor([uint])
 [uint] wwtControl.settings.get_gridColor()
@@ -913,7 +912,6 @@ The **LocalHorizonMode** property specifies that the view should be from a local
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_localHorizonMode([Bool])
 [Bool] wwtControl.settings.get_localHorizonMode()
@@ -939,7 +937,8 @@ The view from New York of the Andromeda Constellation. Note the horizon and comp
 
 ![Andromeda no horizon](images/NYAndromedaNoHorizon.jpg)
 
-The view of Andromeda from the default viewing position, without any local horizon.{% endmethod %}
+The view of Andromeda from the default viewing position, without any local horizon.
+{% endmethod %}
 
 {% method -%}
 ### Settings LocationAltitude Property
@@ -949,7 +948,6 @@ The **LocationAltitude** property specifies the view location altitude in meters
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_locationAltitude([double])
 [double] wwtControl.settings.get_locationAltitude()
@@ -980,7 +978,6 @@ The **LocationLat** property specifies the view location latitude.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_locationLat([double])
 [double] wwtControl.settings.get_locationLat()
@@ -1001,7 +998,8 @@ wwtControl.settings.set_locationAltitude(34);
 wwtControl.settings.set_localHorizonMode(true);
 ```
 
-![](images/LocalSydney.jpg){% endmethod %}
+![](images/LocalSydney.jpg)
+{% endmethod %}
 
 {% method -%}
 ### Settings LocationLng Property
@@ -1011,7 +1009,6 @@ The **LocationLng** property specifies the view location longitude.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_locationLng([double])
 [double] wwtControl.settings.get_locationLng()
@@ -1044,7 +1041,6 @@ The **ShowClouds** property specifies whether to show the Earth's cloud layer.
 #### Syntax
 
 {% sample lang="js" -%}
-
 ```js
 wwtControl.settings.set_showClouds([Bool])
 [Bool] wwtControl.settings.get_showClouds()
@@ -1067,7 +1063,8 @@ The Earth without its cloud layer.
 
 ![Clouds](images/EarthClouds.jpg)
 
-The Earth with its cloud layer.{% endmethod %}
+The Earth with its cloud layer.
+{% endmethod %}
 
 {% method -%}
 ### Settings ShowConstellationBoundries Property
