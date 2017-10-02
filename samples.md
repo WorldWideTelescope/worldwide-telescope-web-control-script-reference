@@ -2,7 +2,9 @@
 
 The following table lists the samples that can be used as a starting point for WorldWide Telescope web client development.
 
-Click on the **Sample Name** to view the source. Note that paths may need to be changed for the samples to work, these paths are highlighted by comments in the sample code.
+To view the source, you can click the gist or bl.ocks.org link. Note that paths may need to be changed for the samples to work, these paths are highlighted by comments in the sample code.
+
+To add your web control sample you may either contact us, or create a gist and send us the link, or update this file and submit a pull request.
 
 ### Sky samples
 | Sample Name | Description |  Gist | Bl.ocks |
@@ -21,7 +23,7 @@ Click on the **Sample Name** to view the source. Note that paths may need to be 
 
 | Sample Name | Description|  Gist | Bl.ocks |
 | :-- |  :-- |  :-- |  :-- |
-| WWT Web Client Earth City Search 46d2ebace646db016d7249d942b85569  | Change the view to the Earth, then locate cities and lat/long locations. |   [![](images/gist.svg "https://gist.github.com/philrosenfield/46d2ebace646db016d7249d942b85569")](https://gist.github.com/philrosenfield/46d2ebace646db016d7249d942b85569) | [![](images/blocks.png "https://bl.ocks.org/philrosenfield/46d2ebace646db016d7249d942b85569")](https://bl.ocks.org/philrosenfield/46d2ebace646db016d7249d942b85569) |
+| WWT Web Client Earth City Search  | Change the view to the Earth, then locate cities and lat/long locations. |   [![](images/gist.svg "https://gist.github.com/philrosenfield/46d2ebace646db016d7249d942b85569")](https://gist.github.com/philrosenfield/46d2ebace646db016d7249d942b85569) | [![](images/blocks.png "https://bl.ocks.org/philrosenfield/46d2ebace646db016d7249d942b85569")](https://bl.ocks.org/philrosenfield/46d2ebace646db016d7249d942b85569) |
 
 
 ### Planet samples
@@ -33,8 +35,8 @@ Click on the **Sample Name** to view the source. Note that paths may need to be 
 
 The following table lists some demonstration programs that have been created using the SDK.
 
-| Demo Name | Description | Link |
-| :-- |
-| **WWT Web Client Hi-Def Planet Explorer** | Provides a range of options for exploring the surfaces of our Moon and Mars. Thousands of surface features, including craters, mountains, valleys, seas, plains, ridges and depressions, are available to step through, sort, search and view. <br> Make sure to select the correct planet or moon in the **Look At** and **Imagery** drop down lists, after starting the program. | **[Run]**(../docs/Samples/wwtwebclientplanetexplorerHtml5.html) |
-| **WWT Web Client Distant Planet Explorer** | Provides a range of options for exploring the surfaces of Mercury, Venus, and the four main moons of Jupiter: IO, Ganymede, Europa and Callisto. Hundreds of surface features, are available to step through, sort, search and view. <br> Make sure to select the correct planet or moon in the **Look At** and **Imagery** drop down lists, after starting the program. | **[Run]**(../docs/Samples/wwtwebclientdistantplanetexplorerHtml5.html) |
-| **WWT Web Client Messier Catalog** | All 110 objects in this famous catalog can be viewed, displayed as a slide show, sorted and searched. | **[Run]**(../docs/Samples/wwtwebclientmessiercatalogHtml5.html) |
+| Demo Name | Description |  Gist | Bl.ocks |
+| :-- |  :-- |  :-- |  :-- |
+| WWT Web Client Hi-Def Planet Explorer | Provides a range of options for exploring the surfaces of our Moon and Mars. Thousands of surface features, including craters, mountains, valleys, seas, plains, ridges and depressions, are available to step through, sort, search and view. <br> Make sure to select the correct planet or moon in the **Look At** and **Imagery** drop down lists, after starting the program. | [![](images/gist.svg "https://gist.github.com/philrosenfield/f33198b570b4561e15d8d6af9e16d108")](https://gist.github.com/philrosenfield/f33198b570b4561e15d8d6af9e16d108) | [![](images/blocks.png "https://bl.ocks.org/philrosenfield/f33198b570b4561e15d8d6af9e16d108")](https://bl.ocks.org/philrosenfield/f33198b570b4561e15d8d6af9e16d108) |
+| WWT Web Client Distant Planet Explorer  | Provides a range of options for exploring the surfaces of Mercury, Venus, and the four main moons of Jupiter: IO, Ganymede, Europa and Callisto. Hundreds of surface features, are available to step through, sort, search and view. <br> Make sure to select the correct planet or moon in the **Look At** and **Imagery** drop down lists, after starting the program. |  [![](images/gist.svg "https://gist.github.com/philrosenfield/e366bec0db9ce4e82013f3144aaed0e3")](https://gist.github.com/philrosenfield/e366bec0db9ce4e82013f3144aaed0e3) | [![](images/blocks.png "https://bl.ocks.org/philrosenfield/e366bec0db9ce4e82013f3144aaed0e3")](https://bl.ocks.org/philrosenfield/e366bec0db9ce4e82013f3144aaed0e3) |
+| WWT Web Client Messier Catalog  | All 110 objects in this famous catalog can be viewed, displayed as a slide show, sorted and searched. |  [![](images/gist.svg "https://gist.github.com/philrosenfield/55082c9e9ff26a77444617be1353d6c5")](https://gist.github.com/philrosenfield/55082c9e9ff26a77444617be1353d6c5) | [![](images/blocks.png "https://bl.ocks.org/philrosenfield/55082c9e9ff26a77444617be1353d6c5")](https://bl.ocks.org/philrosenfield/55082c9e9ff26a77444617be1353d6c5) |
