@@ -5,9 +5,9 @@ The following table lists the samples that can be used as a starting point for W
 Click on the **Sample Name** to view the source. Note that paths may need to be changed for the samples to work, these paths are highlighted by comments in the sample code.
 
 ### Sky samples
-| Sample Name | Description |  Link |
-| :-- |
-| [**WWT Web Client Simple**](../docs/Samples/displaycode.htm?codeExample=wwtwebclientsimpleUIHtml5.html) | Performs the basic steps of opening up a client, and provides a few UI controls to select one of two constellations, and change a few settings. | **[Run]**(../docs/Samples/wwtwebclientsimpleUIHtml5.html)** |
+| Sample Name | Description |  Gist | Bl.ocks |
+| :-- |  :-- |  :-- |  :-- |
+| WWT Web Client Simple | Performs the basic steps of opening up a client, and provides a few UI controls to select one of two constellations, and change a few settings. | [![](images/gist.svg "https://gist.github.com/philrosenfield/81d70d196ec5fbcc28f859905dce0978")](https://bl.ocks.org/philrosenfield/81d70d196ec5fbcc28f859905dce0978) | https://bl.ocks.org/philrosenfield/81d70d196ec5fbcc28f859905dce0978 |
 | [**WWT Web Client Poly**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientPolyHtml5.html) | Adds the creation of two circle, one polygon and one polyline annotation objects to the simple client. | **[Run]**(../docs/Samples/WWTWebClientPolyHtml5.html) |
 | [**WWT Web Client Arrived**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientArrivedHtml5.html) | Shows the use of the Arrived event, drawing a red circle on the new view when the event is received. | **[Run]**(../docs/Samples/WWTWebClientArrivedHtml5.html) |
 | [**WWT Web Client Click Event**](../docs/Samples/displaycode.htm?codeExample=WWTWebClientClickEventHtml5.html) | Shows the use of the Click event, drawing a circle or an alert box giving the location of the click. | **[Run]**(../docs/Samples/wwtwebclientclickeventHtml5.html) |
