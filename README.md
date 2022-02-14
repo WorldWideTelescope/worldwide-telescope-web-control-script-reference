@@ -1,3 +1,13 @@
+# This Repository Has Been Superseded
+
+Everything in this documentation is wildly out of date. To script WWT in web
+contexts, see [the WWT Research App documentation][rapp] and the [WWT WebGL
+engine documentation][engine].
+
+[rapp]: https://docs.worldwidetelescope.org/research-app/
+[engine]: https://docs.worldwidetelescope.org/webgl-reference/
+
+
 # WorldWide Telescope Web Control Script Reference for HTML5
 
 Web Control scripts are used to customize the WorldWide Telescope web client. This document describes the setup, development process, API set and samples to aid developers in building their own applications. The customization scripts are written in JScript and embedded in an html file, and along with custom data files, can be used to do one or more of the following tasks:
